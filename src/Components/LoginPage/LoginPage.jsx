@@ -7,6 +7,7 @@ import { newLogin } from "../../services/login"
 import useSelectCheckbox from "../../hooks/useSelectCheckbox"
 import useCookieManager from "../../hooks/useCookieManager"
 import uniqid from "uniqid"
+import useClosePage from "../../hooks/useClosePage"
 
 function LoginPage() {
 
@@ -14,7 +15,9 @@ function LoginPage() {
 
     const { selectExactlyOne, isSelected, resetIsSelectState, } = useSelectCheckbox({ isRemember: false })
 
-    const {addCookie} = useCookieManager()
+    const { addCookie, cookies } = useCookieManager()
+
+    const { redirectToPage } = useClosePage()
 
     const postNewLogin = async (e) => {
 
@@ -23,7 +26,7 @@ function LoginPage() {
 
         const data = getFormData(e.target)
 
-        const { email, password } = data
+        const { email, password, remember} = data
 
 
         if (email.length === 0 || password.length === 0) {
@@ -43,12 +46,23 @@ function LoginPage() {
                 if (request.trueData) {
                     if (request.confirmedProfil) {
 
+                        addCookie("auth", true, 60)
+
+                       if(remember) {
+                        addCookie("isLog", true, 604800)
+                       } else {
+                        addCookie("isLog", true, 3600)
+                       }
+
+                        
 
                         errorManager("successfull", true)
 
                         e.target.reset()
 
                         resetIsSelectState()
+
+                        redirectToPage("/")
 
                     } else {
 

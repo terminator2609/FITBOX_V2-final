@@ -1,5 +1,4 @@
 import { useCookies } from "react-cookie"
-// import { jwt } from "jsonwebtoken"
 
 function useCookieManager() {
 
@@ -8,10 +7,12 @@ function useCookieManager() {
 
     const addCookie = (name, value, options) => {
 
-
+        setCookies(name, value, {
+           maxAge: options
+        })
     }
 
-    return {addCookie}
+    return {addCookie, cookies}
 }
 
 
