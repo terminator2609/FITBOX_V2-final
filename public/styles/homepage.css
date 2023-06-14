@@ -1,0 +1,1350 @@
+header.homePage {
+    color: #ffffff;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow: hidden;
+}
+
+header.homePage article {
+    margin-left: 3%;
+}
+
+header.homePage article h1 {
+    font-weight: 500;
+    font-size: 12vi;
+    line-height: 1.3;
+
+}
+
+header.homePage article p {
+    margin-top: 35px;
+    font-size: 15px;
+    width: 55%;
+    line-height: 1.2;
+}
+
+header.homePage article:nth-of-type(2) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+    width: 60%;
+    object-fit: cover;
+    aspect-ratio: 1/1.2;
+}
+
+header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+    width: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1.2;
+    opacity: 0.6;
+}
+
+header.homePage article:nth-of-type(2) img:nth-of-type(3) {
+    display: none;
+}
+
+header.homePage article:nth-of-type(3) {
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+
+}
+
+header.homePage article:nth-of-type(3) a {
+    color: #d1ec3e;
+    font-size: 22px;
+}
+
+header.homePage article:nth-of-type(3) i {
+    color: #d1ec3e;
+    font-size: 15px;
+}
+
+
+
+main.homePage {
+    width: 100%;
+    margin-top: 80px;
+}
+
+
+main.homePage section:nth-of-type(1) {
+    width: 95%;
+    color: #ffffff;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+main.homePage section:nth-of-type(1) article h1 {
+    font-weight: 500;
+    font-size: 11vi;
+    line-height: 1.3;
+}
+
+main.homePage section:nth-of-type(1) article p {
+    margin-top: 35px;
+    font-size: 15px;
+    width: 55%;
+    line-height: 1.2;
+}
+
+main.homePage section:nth-of-type(1) article:nth-of-type(3) {
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+
+}
+
+main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+    color: #d1ec3e;
+    font-size: 22px;
+}
+
+main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+    color: #d1ec3e;
+    font-size: 15px;
+}
+
+
+
+main.homePage section:nth-of-type(2) {
+    width: 95%;
+    margin-top: 80px;
+    margin-left: 3%;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+main.homePage section:nth-of-type(2) h1 {
+    font-weight: 500;
+    font-size: 12vi;
+    line-height: 1.3;
+}
+
+
+main.homePage section:nth-of-type(2) img {
+    object-fit: cover;
+    width: 98%;
+    margin-top: 40px;
+}
+
+main.homePage section:nth-of-type(2) img:nth-of-type(2) {
+    display: none;
+    object-fit: cover;
+}
+
+main.homePage section:nth-of-type(2) p {
+    margin-top: 25px;
+    font-size: 15px;
+    width: 55%;
+    line-height: 1.2;
+}
+
+
+
+main.homePage section:nth-of-type(3) {
+    width: 100%;
+    margin-top: 80px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+main.homePage section:nth-of-type(3) article h1 {
+    font-size: 11.6vi;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-left: 1%;
+
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: 500;
+    width: 100%;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+    font-size: 11.6vi;
+    color: #d1ec3e;
+    margin-left: 1%;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(1) div i {
+    font-size: 7.6vi;
+    color: #d1ec3e;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 3%;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    width: 90%;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+    font-size: 10vi;
+    font-weight: 500;
+}
+
+main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+    font-size: 15px;
+}
+
+
+
+main.homePage section:nth-of-type(4) {
+    width: 100%;
+    margin-top: 80px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    overflow: hidden;
+}
+
+main.homePage section:nth-of-type(4) article {
+    margin-left: 3%;
+}
+
+main.homePage section:nth-of-type(4) article h1 {
+    font-weight: 500;
+    font-size: 12vi;
+    line-height: 1.3;
+}
+
+main.homePage section:nth-of-type(4) article p {
+    margin-top: 25px;
+    font-size: 15px;
+    width: 65%;
+    line-height: 1.2;
+}
+
+main.homePage section:nth-of-type(4) article:nth-of-type(2) {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+}
+
+main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(1) {
+    width: 60%;
+    object-fit: cover;
+    aspect-ratio: 1/1.2;
+}
+
+main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(2) {
+    width: 50%;
+    object-fit: cover;
+    aspect-ratio: 1/1.2;
+    opacity: 0.6;
+}
+
+main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(3) {
+    display: none;
+}
+
+
+
+main.homePage section:nth-of-type(5) {
+    margin-top: 150px;
+    width: 95%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main.homePage section:nth-of-type(5) article {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+main.homePage section:nth-of-type(5) article a {
+    font-size: 11.6vi;
+    color: #d1ec3e;
+}
+
+main.homePage section:nth-of-type(5) article i {
+    font-size: 7.6vi;
+    color: #d1ec3e;
+}
+
+
+
+main.homePage section:nth-of-type(6) {
+    margin-top: 150px;
+    width: 95%;
+    margin-left: 3%;
+    color: #ffffff;
+}
+
+main.homePage section:nth-of-type(6) h1 {
+    font-size: 11.6vi;
+    font-weight: 500;
+}
+
+
+main.homePage section:nth-of-type(6) article img {
+    width: 50%;
+    margin-left: -3%;
+    display: block;
+}
+
+
+main.homePage section:nth-of-type(6) article img:nth-of-type(n + 2) {
+    margin-top: -20%;
+
+}
+
+main.homePage section:nth-of-type(6) p {
+    font-size: 8px;
+    margin-top: -8%;
+}
+
+
+
+
+
+
+@media screen and (min-width: 480px) and (max-height: 500px) {
+
+    header.homePage {
+        margin-top: 60px;
+        gap: 45px;
+    }
+
+    header.homePage article h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    header.homePage article p {
+        font-size: 18px;
+        width: 58%;
+        margin-top: 45px;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1.1;
+    }
+
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 43%;
+        aspect-ratio: 1/1.1;
+    }
+
+    header.homePage article:nth-of-type(3) a {
+        font-size: 30px;
+    }
+
+    header.homePage article:nth-of-type(3) i {
+        font-size: 20px;
+    }
+
+    main.homePage {
+        margin-top: 100px;
+    }
+
+    main.homePage section:nth-of-type(1) {
+        gap: 60px;
+    }
+
+    main.homePage section:nth-of-type(1) article h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(1) article p {
+        margin-top: 45px;
+        font-size: 18px;
+        width: 58%;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+        font-size: 30px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+        font-size: 20px;
+    }
+
+
+    main.homePage section:nth-of-type(2) {
+        margin-top: 100px;
+    }
+
+    main.homePage section:nth-of-type(2) h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(2) img {
+        width: 99%;
+        margin-top: 60px;
+    }
+
+    main.homePage section:nth-of-type(2) p {
+        margin-top: 35px;
+        font-size: 18px;
+        width: 58%;
+    }
+
+    main.homePage section:nth-of-type(3) article h1 {
+        font-size: 10vi;
+        margin-left: 2%;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+        font-size: 10vi;
+        margin-left: 2%;
+    }
+
+    main.homePage section:nth-of-type(3) {
+        margin-top: 90px;
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) {
+        gap: 40px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+        gap: 25px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+        font-size: 8vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+        font-size: 18px;
+    }
+
+    main.homePage section:nth-of-type(4) {
+        margin-top: 100px;
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(4) article h1 {
+        font-size: 10vi;
+    }
+
+    main.homePage section:nth-of-type(4) article p {
+        margin-top: 35px;
+        font-size: 18px;
+        width: 70%;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(2) {
+        width: 43%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(5) {
+        margin-top: 170px;
+        gap: 40px;
+    }
+
+    main.homePage section:nth-of-type(5) article {
+        gap: 25px;
+    }
+
+    main.homePage section:nth-of-type(5) article a {
+        font-size: 9.6vi;
+    }
+
+    main.homePage section:nth-of-type(5) article i {
+        font-size: 5.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) {
+        margin-top: 170px;
+    }
+
+    main.homePage section:nth-of-type(6) h1 {
+        font-size: 9.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) article img {
+        width: 40%;
+    }
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 12px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 580px) and (min-height: 950px) {
+
+    header.homePage {
+        margin-top: 60px;
+        gap: 45px;
+    }
+
+    header.homePage article h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    header.homePage article p {
+        font-size: 18px;
+        width: 58%;
+        margin-top: 45px;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1.1;
+    }
+
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 43%;
+        aspect-ratio: 1/1.1;
+    }
+
+    header.homePage article:nth-of-type(3) a {
+        font-size: 30px;
+    }
+
+    header.homePage article:nth-of-type(3) i {
+        font-size: 20px;
+    }
+
+    main.homePage {
+        margin-top: 100px;
+    }
+
+    main.homePage section:nth-of-type(1) {
+        gap: 60px;
+    }
+
+    main.homePage section:nth-of-type(1) article h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(1) article p {
+        margin-top: 45px;
+        font-size: 18px;
+        width: 58%;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+        font-size: 30px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+        font-size: 20px;
+    }
+
+
+    main.homePage section:nth-of-type(2) {
+        margin-top: 100px;
+    }
+
+    main.homePage section:nth-of-type(2) h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(2) img {
+        width: 99%;
+        margin-top: 60px;
+    }
+
+    main.homePage section:nth-of-type(2) p {
+        margin-top: 35px;
+        font-size: 18px;
+        width: 70%;
+    }
+
+    main.homePage section:nth-of-type(3) article h1 {
+        font-size: 10vi;
+        margin-left: 2%;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+        font-size: 10vi;
+        margin-left: 2%;
+    }
+
+    main.homePage section:nth-of-type(3) {
+        margin-top: 90px;
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) {
+        gap: 40px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+        gap: 25px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+        font-size: 8vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+        font-size: 18px;
+    }
+
+    main.homePage section:nth-of-type(4) {
+        margin-top: 100px;
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(4) article h1 {
+        font-size: 10vi;
+    }
+
+    main.homePage section:nth-of-type(4) article p {
+        margin-top: 35px;
+        font-size: 18px;
+        width: 55%;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(2) {
+        width: 43%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(5) {
+        margin-top: 170px;
+        gap: 40px;
+    }
+
+    main.homePage section:nth-of-type(5) article {
+        gap: 25px;
+    }
+
+    main.homePage section:nth-of-type(5) article a {
+        font-size: 9.6vi;
+    }
+
+    main.homePage section:nth-of-type(5) article i {
+        font-size: 5.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) {
+        margin-top: 170px;
+    }
+
+    main.homePage section:nth-of-type(6) h1 {
+        font-size: 9.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) article img {
+        width: 40%;
+    }
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 12px;
+    }
+
+}
+
+
+@media screen and (min-width: 980px) {
+
+
+    header.homePage {
+        margin-top: 70px;
+        gap: 55px;
+    }
+
+    header.homePage article h1 {
+        font-size: 10vi;
+        line-height: 1.4;
+    }
+
+    header.homePage article p {
+        font-size: 20px;
+        width: 50%;
+        margin-top: 50px;
+    }
+
+    header.homePage article:nth-of-type(2) {
+        margin-top: 45px;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 42%;
+        aspect-ratio: 1/1;
+    }
+
+    header.homePage article:nth-of-type(3) {
+        gap: 20px;
+    }
+
+    header.homePage article:nth-of-type(3) a {
+        font-size: 35px;
+    }
+
+    header.homePage article:nth-of-type(3) i {
+        font-size: 25px;
+    }
+
+    main.homePage {
+        margin-top: 120px;
+    }
+
+    main.homePage section:nth-of-type(1) {
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(1) article h1 {
+        font-size: 7.5vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(1) article p {
+        margin-top: 55px;
+        font-size: 20px;
+        width: 58%;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) {
+        gap: 20px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+        font-size: 35px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+        font-size: 25px;
+    }
+
+    main.homePage section:nth-of-type(2) {
+        margin-top: 120px;
+    }
+
+    main.homePage section:nth-of-type(2) h1 {
+        font-size: 8.5vi;
+        line-height: 1.4;
+    }
+
+    main.homePage section:nth-of-type(2) img {
+        width: 99%;
+        margin-top: 70px;
+    }
+
+    main.homePage section:nth-of-type(2) p {
+        margin-top: 45px;
+        font-size: 20px;
+        width: 75%;
+    }
+
+    main.homePage section:nth-of-type(3) article h1 {
+        font-size: 8vi;
+        margin-left: 3%;
+        line-height: 1.4;
+    }
+
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+        font-size: 8vi;
+        margin-left: 3%;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div i {
+        font-size: 5.6vi;
+        color: #d1ec3e;
+    }
+
+
+
+    main.homePage section:nth-of-type(3) {
+        margin-top: 120px;
+        gap: 80px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+        gap: 30px;
+        margin-top: 25px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) {
+        gap: 45px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+        gap: 30px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+        font-size: 6vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+        font-size: 20px;
+    }
+
+    main.homePage section:nth-of-type(4) {
+        margin-top: 120px;
+        gap: 80px;
+    }
+
+    main.homePage section:nth-of-type(4) article h1 {
+        font-size: 9.5vi;
+    }
+
+    main.homePage section:nth-of-type(4) article p {
+        margin-top: 40px;
+        font-size: 20px;
+        width: 50%;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(1) {
+        width: 55%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(2) {
+        width: 43%;
+        aspect-ratio: 1/1.1;
+    }
+
+    main.homePage section:nth-of-type(5) {
+        margin-top: 190px;
+        gap: 50px;
+    }
+
+    main.homePage section:nth-of-type(5) article {
+        gap: 30px;
+    }
+
+    main.homePage section:nth-of-type(5) article a {
+        font-size: 8.6vi;
+    }
+
+
+    main.homePage section:nth-of-type(5) article i {
+        font-size: 4.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) {
+        margin-top: 190px;
+    }
+
+    main.homePage section:nth-of-type(6) h1 {
+        font-size: 8.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) article img {
+        width: 35%;
+    }
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (min-width: 1280px) {
+
+
+    header.homePage {
+        margin-top: 90px;
+        gap: 65px;
+    }
+
+    header.homePage article h1 {
+        font-size: 8vi;
+        line-height: 1.4;
+        display: inline;
+    }
+
+    header.homePage article h1:nth-of-type(2) {
+        margin-left: 30px;
+    }
+
+    header.homePage article p {
+        font-size: 22px;
+        width: 55%;
+        margin-top: 60px;
+    }
+
+    header.homePage article:nth-of-type(2) {
+        margin-top: 55px;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+        width: 40%;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 34%;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(3) {
+        width: 34%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        display: flex;
+    }
+
+    header.homePage article:nth-of-type(3) {
+        gap: 25px;
+    }
+
+    header.homePage article:nth-of-type(3) a {
+        font-size: 40px;
+    }
+
+    header.homePage article:nth-of-type(3) i {
+        font-size: 30px;
+    }
+
+    main.homePage {
+        margin-top: 140px;
+    }
+
+    main.homePage section:nth-of-type(1) {
+        gap: 80px;
+    }
+
+    main.homePage section:nth-of-type(1) article h1 {
+        font-size: 5.5vi;
+    }
+
+    main.homePage section:nth-of-type(1) article p {
+        margin-top: 60px;
+        font-size: 22px;
+        width: 70%;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) {
+        gap: 25px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+        font-size: 45px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+        font-size: 30px;
+    }
+
+    main.homePage section:nth-of-type(2) {
+        margin-top: 140px;
+    }
+
+    main.homePage section:nth-of-type(2) h1 {
+        font-size: 6.5vi;
+        line-height: 1.4;
+        display: inline;
+    }
+
+    main.homePage section:nth-of-type(2) img {
+        width: 48%;
+        margin-top: 80px;
+    }
+
+    main.homePage section:nth-of-type(2) img:nth-of-type(2) {
+        display: inline;
+        margin-left: 2%;
+    }
+
+    main.homePage section:nth-of-type(2) h1:nth-of-type(2) {
+        margin-left: 30px;
+    }
+
+    main.homePage section:nth-of-type(2) p {
+        margin-top: 55px;
+        font-size: 22px;
+        width: 80%;
+    }
+
+
+    main.homePage section:nth-of-type(3) {
+        margin-top: 140px;
+        gap: 90px;
+    }
+
+    main.homePage section:nth-of-type(3) article h1 {
+        font-size: 6vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+        gap: 35px;
+        margin-top: 30px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+        font-size: 6vi;
+    }
+
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div i {
+        font-size: 3.6vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+        font-size: 5vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+        gap: 35px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+        font-size: 22px;
+    }
+
+    main.homePage section:nth-of-type(4) {
+        margin-top: 140px;
+        gap: 90px;
+    }
+
+    main.homePage section:nth-of-type(4) article h1 {
+        font-size: 7.5vi;
+        display: inline;
+    }
+
+    main.homePage section:nth-of-type(4) article h1:nth-of-type(2) {
+        margin-left: 30px;
+    }
+
+    main.homePage section:nth-of-type(4) article p {
+        margin-top: 50px;
+        font-size: 22px;
+        width: 55%;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(1) {
+        width: 40%;
+        aspect-ratio: 1/1;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(2) {
+        width: 32%;
+        aspect-ratio: 1/1;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(2) img:nth-of-type(3) {
+        width: 32%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        display: flex;
+    }
+
+    main.homePage section:nth-of-type(5) {
+        margin-top: 210px;
+        gap: 60px;
+        align-items: center;
+    }
+
+    main.homePage section:nth-of-type(5) article {
+        gap: 40px;
+    }
+
+    main.homePage section:nth-of-type(5) article a {
+        font-size: 6.6vi;
+    }
+
+
+    main.homePage section:nth-of-type(5) article i {
+        font-size: 3.6vi;
+    }
+
+
+    main.homePage section:nth-of-type(6) {
+        margin-top: 210px;
+        text-align: center;
+    }
+
+    main.homePage section:nth-of-type(6) article img {
+        width: 30%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main.homePage section:nth-of-type(6) article img:nth-of-type(n + 2) {
+        margin-top: -15%;
+    }
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 15px;
+    }
+
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 15px;
+        margin-top: -3%;
+    }
+
+
+}
+
+
+
+
+
+@media screen and (min-width: 1800px) {
+
+
+    header.homePage {
+        margin-top: 110px;
+        gap: 75px;
+    }
+
+    header.homePage article h1 {
+        font-size: 6vi;
+    }
+
+    header.homePage article h1:nth-of-type(2) {
+        margin-left: 40px;
+    }
+
+
+    header.homePage article p {
+        font-size: 25px;
+        width: 50%;
+        margin-top: 65px;
+    }
+
+    header.homePage article:nth-of-type(2) {
+        margin-top: 65px;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(1) {
+        width: 40%;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 30%;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(2) {
+        width: 30%;
+    }
+
+    header.homePage article:nth-of-type(2) img:nth-of-type(3) {
+        width: 30%;
+    }
+
+    header.homePage article:nth-of-type(3) {
+        gap: 30px;
+    }
+
+    header.homePage article:nth-of-type(3) a {
+        font-size: 55px;
+    }
+
+
+    header.homePage article:nth-of-type(3) i {
+        font-size: 40px;
+    }
+
+    main.homePage {
+        margin-top: 160px;
+    }
+
+
+    main.homePage section:nth-of-type(1) {
+        gap: 100px;
+    }
+
+    main.homePage section:nth-of-type(1) article h1 {
+        font-size: 3.5vi;
+    }
+
+    main.homePage section:nth-of-type(1) article p {
+        margin-top: 70px;
+        font-size: 25px;
+        width: 75%;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) {
+        gap: 30px;
+    }
+
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) a {
+        font-size: 55px;
+    }
+
+    main.homePage section:nth-of-type(1) article:nth-of-type(3) i {
+        font-size: 40px;
+    }
+
+    main.homePage section:nth-of-type(2) {
+        margin-top: 160px;
+    }
+
+    main.homePage section:nth-of-type(2) h1 {
+        font-size: 4.5vi;
+    }
+
+    main.homePage section:nth-of-type(2) img {
+        width: 48%;
+        margin-top: 90px;
+    }
+
+    main.homePage section:nth-of-type(2) img:nth-of-type(2) {
+        margin-left: 3%;
+    }
+
+    main.homePage section:nth-of-type(2) p {
+        margin-top: 60px;
+        font-size: 25px;
+        width: 90%;
+    }
+
+    main.homePage section:nth-of-type(3) {
+        margin-top: 160px;
+        gap: 100px;
+    }
+
+    main.homePage section:nth-of-type(3) article h1 {
+        font-size: 4vi;
+    }
+
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div {
+        gap: 45px;
+        margin-top: 40px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div a {
+        font-size: 4vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(1) div i {
+        font-size: 3.5vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div {
+        gap: 45px;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div h2 {
+        font-size: 4vi;
+    }
+
+    main.homePage section:nth-of-type(3) article:nth-of-type(2) div p {
+        font-size: 28px;
+    }
+
+    main.homePage section:nth-of-type(4) {
+        margin-top: 160px;
+        gap: 100px;
+    }
+
+    main.homePage section:nth-of-type(4) article h1 {
+        font-size: 5vi;
+    }
+
+    main.homePage section:nth-of-type(4) article h1:nth-of-type(2) {
+        margin-left: 40px;
+    }
+
+    main.homePage section:nth-of-type(4) article p {
+        margin-top: 60px;
+        font-size: 25px;
+        width: 60%;
+    }
+
+    main.homePage section:nth-of-type(4) article:nth-of-type(3) p {
+        width: 85%;
+    }
+
+
+    main.homePage section:nth-of-type(5) {
+        margin-top: 230px;
+        gap: 70px;
+    }
+
+    main.homePage section:nth-of-type(5) article a {
+        font-size: 4.6vi;
+    }
+
+    main.homePage section:nth-of-type(5) article i {
+        font-size: 3.5vi;
+    }
+
+    main.homePage section:nth-of-type(6) {
+        margin-top: 230px;
+    }
+
+    main.homePage section:nth-of-type(6) h1 {
+        font-size: 5.6vi;
+    }
+
+    main.homePage section:nth-of-type(6) article img {
+        width: 22%;
+    }
+
+    main.homePage section:nth-of-type(6) article img:nth-of-type(n + 2) {
+        margin-top: -10%;
+    }
+
+    main.homePage section:nth-of-type(6) p {
+        font-size: 18px;
+        margin-top: -2%;
+    }
+
+}

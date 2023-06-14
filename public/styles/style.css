@@ -1,0 +1,21 @@
+@import url("reset.css");
+@import url("homepage.css");
+@import url("subscribe.css");
+@import url("cancel.css");
+@import url("login.css");
+@import url("registration.css");
+@import url("forgotenPass.css");
+@import url("newPass.css");
+@import url("profile.css");
+
+
+
+::-webkit-scrollbar {
+    width: 2px;
+    background-color: black;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #d1ec3e;
+}
