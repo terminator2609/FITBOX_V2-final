@@ -7,8 +7,23 @@ import ForgotenPassPage from "./Components/ForgotenPassPage/ForgotenPassPage";
 import NewPassPage from "./Components/newPassPage/newPassPage";
 import RegistrationPage from "./Components/RegistrationPage/RegistrationPage"
 import ProfilePage from "./Components/ProfilePage/ProfilePage"
+import { useEffect } from "react";
+import useAuthManager from "./hooks/useAuthManager";
+
 
 function App() {
+
+  const {authChecking, routerGuarding} = useAuthManager()
+
+  useEffect(() => {
+
+    authChecking()
+
+  }, [])
+
+
+  routerGuarding()
+
 
   return (
     <>
@@ -20,7 +35,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/forgotenPass" element={<ForgotenPassPage />} />
         <Route path="/newPass" element={<NewPassPage />} />
-        <Route path="/registration" element={<RegistrationPage />} />
+        <Route path="/registration" element={<RegistrationPage />} />s
         <Route path="/profile" element={<ProfilePage />} />
 
       </Routes>

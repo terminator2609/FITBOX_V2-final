@@ -4,7 +4,7 @@ function useCookieManager() {
 
     const [cookies, setCookies, removeCookie] = useCookies([])
 
-
+    
     const addCookie = (name, value, options) => {
 
         setCookies(name, value, {
@@ -12,7 +12,12 @@ function useCookieManager() {
         })
     }
 
-    return {addCookie, cookies}
+    const removeCookies = (name) => {
+
+        removeCookie(name)
+    }
+
+    return {addCookie, cookies, removeCookies}
 }
 
 

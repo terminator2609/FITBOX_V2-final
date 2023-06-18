@@ -1,20 +1,20 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Navigation from "../Navigation/Navigation"
 import Footer from "../Footer/Footer"
-import { useLocation } from "react-router-dom"
 import { useEffect } from "react"
 import { postConfirmationRegistration, getUserDataById } from "../../services/registration"
 import { useState } from "react"
 import PopUp from "../PopUp/PopUp"
 import { useSearchParams } from "react-router-dom"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
+import useCookieManager from "../../hooks/useCookieManager"
 
 
 function HomePage() {
 
     const [confirmStatus, setConfirmStatus] = useState({ successfullConfirm: false, profilNoExist: false, profilAlreadyConfirm: false })
     const [searchParams, setSearchParams] = useSearchParams()
-
+    const { cookies } = useCookieManager()
     const location = useLocation()
 
     useEffect(() => {
@@ -196,26 +196,43 @@ function HomePage() {
                 </section>
 
                 <section>
-                    <article>
 
-                        <Link to="/cancel">Канселирай</Link>
-                        <i className="fa-solid fa-arrow-right-long"></i>
 
-                    </article>
 
-                    <article>
+                    {cookies.isLog ?
 
-                        <Link to="/login">Вход</Link>
-                        <i className="fa-solid fa-arrow-right-long"></i>
+                        <>
 
-                    </article>
+                            <article>
 
-                    <article>
+                                <Link to="/profile">Профил</Link>
+                                <i className="fa-solid fa-arrow-right-long"></i>
 
-                        <Link to="/profile">Профил</Link>
-                        <i className="fa-solid fa-arrow-right-long"></i>
+                            </article>
 
-                    </article>
+                            <article>
+
+                                <Link to="/cancel">Канселирай</Link>
+                                <i className="fa-solid fa-arrow-right-long"></i>
+
+                            </article>
+
+                        </>
+
+                        :
+
+                        <article>
+
+                            <Link to="/login">Вход</Link>
+                            <i className="fa-solid fa-arrow-right-long"></i>
+
+                        </article>
+
+
+                    }
+
+
+
                 </section>
 
                 <section>
@@ -234,6 +251,9 @@ function HomePage() {
             {confirmStatus.successfullConfirm ? <PopUp type="successfullConfirm" /> : ""}
             {confirmStatus.profilAlreadyConfirm ? <PopUp type="profilAlreadyConfirm" /> : ""}
             {confirmStatus.profilNoExist ? <PopUp type="profileNoExist" /> : ""}
+
+
+            {cookies.auth ? <PopUp type="successfullLogin" /> : ""}
 
 
         </>

@@ -2,11 +2,14 @@ import { Link } from "react-router-dom"
 import "./PopUp.css"
 import { useState } from "react"
 import useClosePage from "../../hooks/useClosePage"
+import useCookieManager from "../../hooks/useCookieManager"
 
 function PopUP(type) {
 
     const [isClosed, setIsClosed] = useState(false)
     const { closePage } = useClosePage()
+
+    const {removeCookies} = useCookieManager()
 
     type = type.type
 
@@ -16,6 +19,11 @@ function PopUP(type) {
         closePage(type)
 
         setIsClosed(true)
+
+        if(type === "successfullLogin") {
+
+            removeCookies("auth")
+        }
     }
 
 
@@ -30,8 +38,8 @@ function PopUP(type) {
         },
 
         successfullConfirm: {
-            header: "Успешно потвърждение",
-            pg: "Успешно потвърдихте вашата регистрация. Остана само едно нещо. Да влезете във вашият профил от бутона по-долу:",
+            header: "Хей, вече си в семейството",
+            pg: "Твоите потребителски данни вече са в системата, така че спокойно можеш да се логнеш:",
             button: ["Вход", "/login"]
         },
 
@@ -49,6 +57,14 @@ function PopUP(type) {
             pg: "Ако имате въпрос по тази тема, се свържете с нас по начините по долу:",
             button: []
 
+        },
+
+
+        successfullLogin: {
+
+            header: "Успешно влизане във вашия профил",
+            pg: "Не ти остана нищо друго, освен да натиснеш бутона:",
+            button: ["Абонирай се", "/subscribe"]
         }
 
     }
