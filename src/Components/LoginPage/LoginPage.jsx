@@ -8,9 +8,8 @@ import useSelectCheckbox from "../../hooks/useSelectCheckbox"
 import useCookieManager from "../../hooks/useCookieManager"
 import uniqid from "uniqid"
 import useClosePage from "../../hooks/useClosePage"
-import useAuthManager from "../../hooks/useAuthManager"
 
-function LoginPage() {
+function LoginPage({routing}) {
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, isAuthSubmitStatus } = useError({ emailIn: false, passwordIn: false }, "no", { emailForIn: false })
 
@@ -20,7 +19,6 @@ function LoginPage() {
 
     const { redirectToPage } = useClosePage()
 
-    const {settingOnAuthStatus} = useAuthManager()
 
     const postNewLogin = async (e) => {
 
@@ -57,9 +55,7 @@ function LoginPage() {
                         addCookie("isLog", true, 3600)
                        }
 
-
-                       settingOnAuthStatus(true)
-                       
+                       routing()
 
                         errorManager("successfull", true)
 

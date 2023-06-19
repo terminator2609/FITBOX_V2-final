@@ -13,7 +13,7 @@ import useAuthManager from "./hooks/useAuthManager";
 
 function App() {
 
-  const {authChecking, routerGuarding} = useAuthManager()
+  const { authChecking, routerGuarding, settingOnAuthStatus } = useAuthManager()
 
   useEffect(() => {
 
@@ -22,7 +22,17 @@ function App() {
   }, [])
 
 
+  const routing = () => {
+
+    settingOnAuthStatus(true)
+
+  }
+
+
   routerGuarding()
+
+
+
 
 
   return (
@@ -32,7 +42,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/subscribe" element={<SubscribePage />} />
         <Route path="/cancel" element={<CancelPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login" element={<LoginPage routing={routing} />} />
         <Route path="/forgotenPass" element={<ForgotenPassPage />} />
         <Route path="/newPass" element={<NewPassPage />} />
         <Route path="/registration" element={<RegistrationPage />} />s

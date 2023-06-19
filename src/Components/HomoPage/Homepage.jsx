@@ -8,6 +8,8 @@ import PopUp from "../PopUp/PopUp"
 import { useSearchParams } from "react-router-dom"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import useCookieManager from "../../hooks/useCookieManager"
+import useAuthManager from "../../hooks/useAuthManager"
+
 
 
 function HomePage() {
@@ -57,6 +59,7 @@ function HomePage() {
 
 
         }
+
 
 
         // eslint-disable-next-line
