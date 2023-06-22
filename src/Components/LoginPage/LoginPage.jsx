@@ -47,12 +47,14 @@ function LoginPage({routing}) {
                 if (request.trueData) {
                     if (request.confirmedProfil) {
 
-                        addCookie("auth", true, 60)
+                        addCookie("auth", true, 20)
 
                        if(remember) {
                         addCookie("isLog", true, 604800)
+                        addCookie("dataId", request.id, 604800)
                        } else {
                         addCookie("isLog", true, 3600)
+                        addCookie("dataId", request.id, 3600)
                        }
 
                        routing()
