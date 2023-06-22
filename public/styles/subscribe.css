@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 header.subscribePage {
     color: #ffffff;
     margin-top: 50px;
@@ -40,7 +47,9 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
     color: #ffffff;
     font-size: 15px;
     font-family: Montserrat;
-    appearance: none
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
@@ -51,6 +60,26 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
     width: 98%;
     font-size: 15px;
+}
+
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-moz-placeholder {
+    color: #ffffff;
+}
+
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-ms-input-placeholder {
+    color: #ffffff;
 }
 
 
@@ -69,7 +98,11 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:focus {
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
     margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     gap: 10px;
     position: relative;
@@ -147,13 +180,22 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
 }
 
 main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 20px;
 }
 
 main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     gap: 10px;
 }
@@ -178,14 +220,23 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form {
 }
 
 main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     gap: 25px;
     margin-left: 3%;
 }
 
 main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     gap: 10px;
     position: relative;
@@ -247,6 +298,22 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     font-family: Montserrat;
 }
 
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-moz-placeholder {
+    color: #ffffff;
+}
+
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:-ms-input-placeholder {
+    color: #ffffff;
+}
+
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-ms-input-placeholder {
+    color: #ffffff;
+}
+
 main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::placeholder {
     color: #ffffff;
 }
@@ -263,7 +330,11 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
 main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
     margin-top: 80px;
     padding-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline;
     gap: 0px;
 }
@@ -1048,15 +1119,4 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         font-size: 40px;
     }
 
-}
-
-
-::-webkit-scrollbar {
-    width: 2px;
-    background-color: black;
-}
-
-
-::-webkit-scrollbar-thumb {
-    background-color: #d1ec3e;
 }
