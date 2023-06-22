@@ -40,6 +40,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
     color: #ffffff;
     font-size: 15px;
     font-family: Montserrat;
+    appearance: none
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
