@@ -47,6 +47,7 @@ main.loginPage form div:nth-of-type(1) input {
     color: #ffffff;
     font-size: 15px;
     font-family: Montserrat;
+    border-radius: 0px;
 }
 
 main.loginPage form div:nth-of-type(1) input.error {
