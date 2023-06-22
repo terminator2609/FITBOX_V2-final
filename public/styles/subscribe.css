@@ -50,7 +50,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: none;
+    border-radius: 0px;
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
