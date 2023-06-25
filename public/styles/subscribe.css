@@ -54,13 +54,12 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
-    width: 98% !important;
     background-color: #000000 !important;
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
-    width: 98%;
-    font-size: 15px;
+    min-width: 10%;
+    font-size: 12px;
 }
 
 
@@ -93,8 +92,13 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
     margin-top: 40px;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:focus {
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:focus,
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select:focus {
     outline: none !important;
+}
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option:checked {
+    background-color: #d1ec3e;
 }
 
 main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
@@ -372,10 +376,16 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         font-size: 20px;
     }
 
+
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+        font-size: 17px;
+        margin-left: 10px;
+    }
 
     main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
         margin-top: 25px;
@@ -523,8 +533,14 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         font-size: 22px;
+    }
+
+
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+        font-size: 19px;
     }
 
 
@@ -658,8 +674,6 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
 @media screen and (min-width: 980px) {
 
 
-
-
     header.subscribePage {
         margin-top: 70px;
         font-size: 8vi;
@@ -671,13 +685,20 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         font-size: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2) {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         margin-top: 45px;
+    }
+
+
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+        font-size: 22px;
     }
 
 
@@ -827,17 +848,23 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         font-size: 28px;
         width: 60%;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2) {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         margin-top: 50px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+        font-size: 25px;
+    }
 
+    
     main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
         margin-top: 40px;
         gap: 25px;
@@ -981,16 +1008,21 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         font-size: 32px;
         width: 55%;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2) {
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
         margin-top: 60px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+        font-size: 29px;
+    }
 
     main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
         margin-top: 50px;
