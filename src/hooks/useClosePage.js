@@ -5,23 +5,25 @@ function useClosePage() {
 
     const history = useNavigate()
 
-    const redirectToPage = (arg) => {
+    const redirectToPage = (arg, data) => {
 
-        history(arg)
+        history(arg, { state: data })
     }
 
 
     const closePage = (arg) => {
 
-        if(arg === "successfullReg") {
+        if (arg === "successfullReg") {
 
             redirectToPage("/")
+        } else if (arg === "successfullLogin") {
+            redirectToPage("/")
         }
-        
+
     }
 
 
-    return { redirectToPage, closePage}
+    return { redirectToPage, closePage }
 
 }
 
