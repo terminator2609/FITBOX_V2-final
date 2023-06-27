@@ -9,7 +9,7 @@ function PopUP(type) {
     const [isClosed, setIsClosed] = useState(false)
     const { closePage } = useClosePage()
 
-    const {removeCookies} = useCookieManager()
+    const { removeCookies } = useCookieManager()
 
     type = type.type
 
@@ -20,7 +20,7 @@ function PopUP(type) {
 
         setIsClosed(true)
 
-        if(type === "successfullLogin") {
+        if (type == "successfullLogin") {
 
             removeCookies("auth")
         }
@@ -65,6 +65,13 @@ function PopUP(type) {
             header: "Успешно влизане във вашия профил",
             pg: "Не ти остана нищо друго, освен да натиснеш бутона:",
             button: ["Абонирай се", "/subscribe"]
+        },
+
+
+        404: {
+            header: "404",
+            pg: "Страницата, която търсеше не беше намерена",
+            button: ["Начална", "/"]
         }
 
     }
