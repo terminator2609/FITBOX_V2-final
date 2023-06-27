@@ -332,7 +332,8 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
 }
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3),
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
     margin-top: 80px;
     padding-bottom: 30px;
     display: -webkit-box;
@@ -344,7 +345,13 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     gap: 0px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
+
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    margin-top: 120px;
+}
+
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
     background: none;
     border: none;
     color: #d1ec3e;
@@ -352,11 +359,14 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     margin-left: -3%;
     font-family: Montserrat;
     font-weight: 400;
+    cursor: pointer;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
+main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
+main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
     color: #d1ec3e;
     font-size: 15px;
+    cursor: pointer;
 }
 
 
@@ -415,9 +425,8 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
 
 
     main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
-        top: 25px;
+        top: 45px;
     }
-
 
     main.subscribePage section:nth-of-type(2) {
         margin-top: 35%;
@@ -500,17 +509,22 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         font-size: 20px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+        margin-top: 130px;
+    }
 
     main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
         margin-top: 90px;
     }
 
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
+    
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
         font-size: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         font-size: 20px;
     }
 
@@ -654,17 +668,22 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         font-size: 22px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+        margin-top: 140px;
+    }
 
     main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
         margin-top: 100px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
         font-size: 35px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         font-size: 25px;
     }
 
@@ -817,17 +836,22 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         margin-top: 45px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+        margin-top: 160px;
+    }
 
     main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
         margin-top: 120px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
         font-size: 40px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         font-size: 30px;
     }
 
@@ -864,7 +888,7 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         font-size: 25px;
     }
 
-    
+
     main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
         margin-top: 40px;
         gap: 25px;
@@ -982,13 +1006,19 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         margin-top: 140px;
     }
 
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+        margin-top: 170px;
+    }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
+
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
         font-size: 50px;
         margin-left: -1%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
+    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         font-size: 40px;
     }
 
@@ -1143,13 +1173,9 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
         margin-top: 160px;
     }
 
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input {
-        font-size: 50px;
+    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+        margin-top: 180px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i {
-        font-size: 40px;
-    }
 
 }

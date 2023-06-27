@@ -3,6 +3,11 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop"
 
 function SubscribePage() {
 
+    const getSubscriberData = (e) => {
+
+        e.preventDefault()
+    }
+
     return (
 
         <>
@@ -17,7 +22,7 @@ function SubscribePage() {
             <main className="subscribePage">
 
                 <section>
-                    <form action="#" >
+                    <form action="#" method="POST" onSubmit={getSubscriberData}>
                         <div>
                             <input type="text" name="name" id="name" placeholder="ИМЕ" />
                             <input type="number" name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" />
@@ -49,6 +54,12 @@ function SubscribePage() {
 
                             </div>
 
+                        </div>
+
+
+                        <div>
+                            <input type="submit" value="Начин на плащене" />
+                            <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
 
                     </form >
