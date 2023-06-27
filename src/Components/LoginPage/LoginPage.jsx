@@ -15,7 +15,7 @@ function LoginPage({routing}) {
 
     const { selectExactlyOne, isSelected, resetIsSelectState, } = useSelectCheckbox({ isRemember: false })
 
-    const { addCookie, cookies } = useCookieManager()
+    const { addCookie} = useCookieManager()
 
     const { redirectToPage } = useClosePage()
 
@@ -47,8 +47,6 @@ function LoginPage({routing}) {
                 if (request.trueData) {
                     if (request.confirmedProfil) {
 
-                        addCookie("auth", true, 20)
-
                        if(remember) {
                         addCookie("isLog", true, 604800)
                         addCookie("dataId", request.id, 604800)
@@ -64,8 +62,9 @@ function LoginPage({routing}) {
                         e.target.reset()
 
                         resetIsSelectState()
-
-                        redirectToPage("/")
+                        
+                        
+                        redirectToPage("/", "successfullLogin")
 
                     } else {
 

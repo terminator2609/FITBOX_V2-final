@@ -9,17 +9,19 @@ import RegistrationPage from "./Components/RegistrationPage/RegistrationPage"
 import ProfilePage from "./Components/ProfilePage/ProfilePage"
 import { useEffect } from "react";
 import useAuthManager from "./hooks/useAuthManager";
+import PopUP from "./Components/PopUp/PopUp";
 
 
 function App() {
 
-  const { authChecking, routerGuarding, settingOnAuthStatus } = useAuthManager()
+  const { authChecking, routerGuarding, settingOnAuthStatus, auth } = useAuthManager()
 
   useEffect(() => {
 
     authChecking()
 
-  }, [])
+    routerGuarding()
+  }, [auth])
 
 
   const routing = () => {
@@ -29,17 +31,12 @@ function App() {
   }
 
 
-  routerGuarding()
-
-
-
-
 
   return (
     <>
       <Routes>
 
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage auth={auth} />} />
         <Route path="/subscribe" element={<SubscribePage />} />
         <Route path="/cancel" element={<CancelPage />} />
         <Route path="/login" element={<LoginPage routing={routing} />} />
@@ -47,6 +44,7 @@ function App() {
         <Route path="/newPass" element={<NewPassPage />} />
         <Route path="/registration" element={<RegistrationPage />} />s
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="*" element={<PopUP type="404"/>}/>
 
       </Routes>
     </>

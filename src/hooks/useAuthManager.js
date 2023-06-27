@@ -31,7 +31,7 @@ function useAuthManager() {
         if (cookies.isLog) {
 
             setAuth(true)
-        }
+        } 
     }
 
 
@@ -54,7 +54,7 @@ function useAuthManager() {
 
 
 
-    return { settingOnAuthStatus, authChecking, routerGuarding }
+    return { settingOnAuthStatus, authChecking, routerGuarding, auth }
 
 }
 

@@ -11,14 +11,17 @@ import useCookieManager from "../../hooks/useCookieManager"
 
 
 
-function HomePage() {
+function HomePage({auth}) {
 
     const [confirmStatus, setConfirmStatus] = useState({ successfullConfirm: false, profilNoExist: false, profilAlreadyConfirm: false })
     const [searchParams, setSearchParams] = useSearchParams()
     const { cookies } = useCookieManager()
     const location = useLocation()
 
+    
+
     useEffect(() => {
+
 
         if (location.search.includes("confirmed")) {
 
@@ -93,7 +96,7 @@ function HomePage() {
 
                 <article>
 
-                    <Link to="/subscribe">Абонирай се</Link>
+                    <Link to={auth ? "/subscribe" : "/login"}>Абонирай се</Link>
                     <i className="fa-solid fa-arrow-right-long"></i>
 
                 </article>
@@ -149,7 +152,7 @@ function HomePage() {
                     <article>
                         <h1>След натискане на бутон</h1>
                         <div>
-                            <Link to="/subscribe">Абонирай се</Link>
+                            <Link to={auth ? "/subscribe" : "/login"}>Абонирай се</Link>
                             <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
                     </article>
@@ -255,7 +258,7 @@ function HomePage() {
             {confirmStatus.profilNoExist ? <PopUp type="profileNoExist" /> : ""}
 
 
-            {cookies.auth ? <PopUp type="successfullLogin" /> : ""}
+            {location.state === "successfullLogin" ? <PopUp type="successfullLogin" /> : ""}
 
 
         </>
