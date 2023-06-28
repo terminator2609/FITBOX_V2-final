@@ -8,17 +8,29 @@ import useSelectCheckbox from "../../hooks/useSelectCheckbox"
 import useCookieManager from "../../hooks/useCookieManager"
 import uniqid from "uniqid"
 import useClosePage from "../../hooks/useClosePage"
+import { useEffect } from "react"
+import useAuthManager from "../../hooks/useAuthManager"
 
-function LoginPage({routing}) {
+
+function LoginPage() {
+
+    const { routerGuarding } = useAuthManager()
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, isAuthSubmitStatus } = useError({ emailIn: false, passwordIn: false }, "no", { emailForIn: false })
 
     const { selectExactlyOne, isSelected, resetIsSelectState, } = useSelectCheckbox({ isRemember: false })
 
-    const { addCookie} = useCookieManager()
+    const { addCookie } = useCookieManager()
 
     const { redirectToPage } = useClosePage()
 
+    useEffect(() => {
+
+
+        routerGuarding()
+
+
+    }, [])
 
     const postNewLogin = async (e) => {
 
@@ -27,7 +39,7 @@ function LoginPage({routing}) {
 
         const data = getFormData(e.target)
 
-        const { email, password, remember} = data
+        const { email, password, remember } = data
 
 
         if (email.length === 0 || password.length === 0) {
@@ -47,23 +59,22 @@ function LoginPage({routing}) {
                 if (request.trueData) {
                     if (request.confirmedProfil) {
 
-                       if(remember) {
-                        addCookie("isLog", true, 604800)
-                        addCookie("dataId", request.id, 604800)
-                       } else {
-                        addCookie("isLog", true, 3600)
-                        addCookie("dataId", request.id, 3600)
-                       }
+                        if (remember) {
+                            addCookie("isLog", true, 604800)
+                            addCookie("dataId", request.id, 604800)
+                        } else {
+                            addCookie("isLog", true, 3600)
+                            addCookie("dataId", request.id, 3600)
+                        }
 
-                       routing()
 
                         errorManager("successfull", true)
 
                         e.target.reset()
 
                         resetIsSelectState()
-                        
-                        
+
+
                         redirectToPage("/", "successfullLogin")
 
                     } else {

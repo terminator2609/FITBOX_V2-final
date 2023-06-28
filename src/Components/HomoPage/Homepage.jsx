@@ -11,7 +11,7 @@ import useCookieManager from "../../hooks/useCookieManager"
 
 
 
-function HomePage({auth}) {
+function HomePage() {
 
     const [confirmStatus, setConfirmStatus] = useState({ successfullConfirm: false, profilNoExist: false, profilAlreadyConfirm: false })
     const [searchParams, setSearchParams] = useSearchParams()
@@ -96,7 +96,7 @@ function HomePage({auth}) {
 
                 <article>
 
-                    <Link to={auth ? "/subscribe" : "/login"}>Абонирай се</Link>
+                    <Link to={cookies.isLog ? "/subscribe" : "/login"}>Абонирай се</Link>
                     <i className="fa-solid fa-arrow-right-long"></i>
 
                 </article>
@@ -152,7 +152,7 @@ function HomePage({auth}) {
                     <article>
                         <h1>След натискане на бутон</h1>
                         <div>
-                            <Link to={auth ? "/subscribe" : "/login"}>Абонирай се</Link>
+                            <Link to={cookies.isLog ? "/subscribe" : "/login"}>Абонирай се</Link>
                             <i className="fa-solid fa-arrow-right-long"></i>
                         </div>
                     </article>

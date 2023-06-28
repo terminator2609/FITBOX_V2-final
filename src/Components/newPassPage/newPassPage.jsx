@@ -1,13 +1,26 @@
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
+import { useEffect } from "react"
+import useAuthManager from "../../hooks/useAuthManager"
+
 
 function NewPassPage() {
+
+    const { routerGuarding } = useAuthManager()
+
+    useEffect(() => {
+
+
+        routerGuarding()
+
+
+    }, [])
 
     return (
 
         <>
 
-        <ScrollToTop />
+            <ScrollToTop />
 
             <Navigation />
 
@@ -22,13 +35,13 @@ function NewPassPage() {
                 <form action="#" method="POST">
 
                     <div>
-                        <input type="password" name="password" id="password" placeholder="НОВА ПАРОЛА"/>
+                        <input type="password" name="password" id="password" placeholder="НОВА ПАРОЛА" />
                     </div>
 
 
                     <div>
-                        <input type="submit" value="Запази"/>
-                            <i className="fa-solid fa-arrow-right-long"></i>
+                        <input type="submit" value="Запази" />
+                        <i className="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </form>
             </main>

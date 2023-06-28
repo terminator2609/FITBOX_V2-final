@@ -1,7 +1,20 @@
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
+import { useEffect } from "react"
+import useAuthManager from "../../hooks/useAuthManager"
 
 function CancelPage() {
+
+    const {routerGuarding} = useAuthManager()
+
+    useEffect(() => {
+
+
+        routerGuarding()
+        
+
+    }, [])
+
 
     return (
 

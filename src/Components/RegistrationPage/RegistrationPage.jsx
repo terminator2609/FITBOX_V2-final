@@ -5,11 +5,20 @@ import { postNewUserRequest, getUserDataByEmail } from "../../services/registrat
 import uniqid from "uniqid"
 import PopUP from "../PopUp/PopUp"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
-
-
+import { useEffect } from "react"
+import useAuthManager from "../../hooks/useAuthManager"
 
 function RegistrationPage() {
 
+    const { routerGuarding } = useAuthManager()
+
+    useEffect(() => {
+
+
+        routerGuarding()
+
+
+    }, [])
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, passwordContains, passwordChangeHandler, isAuthSubmitStatus, isSubmitStatus } = useError({ namesIn: false, emailIn: false, passwordIn: false, phoneNumberIn: false }, "no", { emailForIn: false, passwordForIn: false, phoneNumberForIn: false })
 
@@ -88,7 +97,7 @@ function RegistrationPage() {
 
         <>
             <ScrollToTop />
-            
+
             <Navigation />
 
 

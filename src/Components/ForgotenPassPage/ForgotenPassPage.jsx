@@ -1,8 +1,22 @@
 import { useNavigate } from "react-router-dom"
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
+import { useEffect } from "react"
+import useAuthManager from "../../hooks/useAuthManager"
+
 
 function ForgotenPassPage() {
+
+    const { routerGuarding } = useAuthManager()
+
+    useEffect(() => {
+
+
+        routerGuarding()
+
+
+    }, [])
+
 
     const navigation = useNavigate()
 
@@ -19,7 +33,7 @@ function ForgotenPassPage() {
 
         <>
             <ScrollToTop />
-            
+
             <Navigation />
 
 

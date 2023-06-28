@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
 import useClosePage from "../hooks/useClosePage";
 import useCookieManager from "../hooks/useCookieManager";
 import { useLocation } from "react-router-dom";
 
 function useAuthManager() {
 
-    const [auth, setAuth] = useState(false)
 
     const location = useLocation()
 
@@ -16,32 +14,13 @@ function useAuthManager() {
 
 
 
-    const settingOnAuthStatus = (authStatus) => {
-
-        if (authStatus) {
-            setAuth(true)
-        }
-
-
-    }
-
-
-    const authChecking = () => {
-
-        if (cookies.isLog) {
-
-            setAuth(true)
-        } 
-    }
-
-
     const routerGuarding = () => {
 
-        if (!auth && (location.pathname === "/subscribe" || location.pathname === "/cancel" || location.pathname === "/profile")) {
+        if (cookies.isLog === undefined && (location.pathname === "/subscribe" || location.pathname === "/cancel" || location.pathname === "/profile")) {
 
             redirectToPage("/login")
 
-        } else if (auth && (location.pathname === "/login" || location.pathname === "/registration" || location.pathname === "/forgotenPass" || location.pathname === "/newPass")) {
+        } else if (cookies.isLog && location.pathname === "/login" || cookies.isLog && location.pathname === "/registration" || cookies.isLog && location.pathname === "/forgotenPass" || cookies.isLog && location.pathname === "/newPass") {
 
             redirectToPage("/")
 
@@ -54,7 +33,7 @@ function useAuthManager() {
 
 
 
-    return { settingOnAuthStatus, authChecking, routerGuarding, auth }
+    return { routerGuarding }
 
 }
 
