@@ -60,11 +60,9 @@ function LoginPage() {
                     if (request.confirmedProfil) {
 
                         if (remember) {
-                            addCookie("isLog", true, 604800)
-                            addCookie("dataId", request.id, 604800)
+                            addCookie("isLog", { id: request.id }, 604800)
                         } else {
-                            addCookie("isLog", true, 3600)
-                            addCookie("dataId", request.id, 3600)
+                            addCookie("isLog", { id: request.id }, 3600)
                         }
 
 

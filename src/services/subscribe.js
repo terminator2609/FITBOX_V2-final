@@ -1,6 +1,6 @@
-// const baseUrl = "https://healthy-seal-stockings.cyclic.app"
+const baseUrl = "https://healthy-seal-stockings.cyclic.app"
 
-const baseUrl = "http://localhost:5000"
+// const baseUrl = "http://localhost:5000"
 
 
 function postNewSubscribe(data) {
@@ -16,4 +16,11 @@ function postNewSubscribe(data) {
 }
 
 
-export { postNewSubscribe }
+function checkForSubscribe(id) {
+
+    return fetch(`${baseUrl}/subscribe/${id}`)
+    .then((res) => res.json())
+}
+
+
+export { postNewSubscribe, checkForSubscribe }

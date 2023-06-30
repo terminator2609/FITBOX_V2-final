@@ -6,14 +6,14 @@ import useClosePage from "../../hooks/useClosePage"
 import getFormData from "../../utilities/getFormData"
 import useSelectCheckbox from "../../hooks/useSelectCheckbox"
 import { isMacOs, isIOS } from 'react-device-detect';
-import { postNewSubscribe } from "../../services/subscribe"
+import { postNewSubscribe, checkForSubscribe } from "../../services/subscribe"
 import useCookieManager from "../../hooks/useCookieManager"
 
 
 function SubscribePageStep2() {
 
     const { routerGuarding } = useAuthManager()
-    const { selectJustOne, isSelected, resetIsSelectState, } = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
+    const { selectJustOne, isSelected} = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
     const { redirectToPage } = useClosePage()
 
     const { cookies, removeCookies } = useCookieManager()
@@ -21,13 +21,24 @@ function SubscribePageStep2() {
 
     useEffect(() => {
 
+        routerGuarding()
+
+        
 
         if (!cookies.person) {
             redirectToPage("/subscribe")
         }
 
-        routerGuarding()
 
+        checkForSubscribe(cookies.isLog.id).then((res) => {
+
+            if(res.subscribed) {
+
+                redirectToPage("/", "alreadyExistSubscribe")
+            }
+        })
+
+        
 
     }, [])
 
@@ -50,7 +61,7 @@ function SubscribePageStep2() {
             phoneNumber,
             city,
             officeOfSpeedy,
-            user: cookies.dataId
+            user: cookies.isLog.id
 
         }
 

@@ -264,6 +264,8 @@ function HomePage() {
 
             {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""} 
 
+            {location.state === "alreadyExistSubscribe" ? <PopUp type="alreadyExistSubscribe"/> : ""}
+
 
         </>
     )

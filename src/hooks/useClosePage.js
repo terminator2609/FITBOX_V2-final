@@ -13,16 +13,9 @@ function useClosePage() {
 
     const closePage = (arg) => {
 
-        if (arg === "successfullReg") {
 
-            redirectToPage("/")
+        if (arg == "successfullSubscribe" || arg == "unsuccessfullSubscribe" || arg === "alreadyExistSubscribe" || arg === "successfullLogin" || arg === "successfullReg") {
 
-        } else if (arg === "successfullLogin") {
-
-            redirectToPage("/")
-
-        } else if (arg == "successfullSubscribe" || arg == "unsuccessfullSubscribe") {
-            
             redirectToPage("/")
         }
 

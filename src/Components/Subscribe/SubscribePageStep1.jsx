@@ -7,6 +7,7 @@ import getFormData from "../../utilities/getFormData"
 import useError from "../../hooks/useError"
 import uniqid from "uniqid"
 import useCookieManager from "../../hooks/useCookieManager"
+import {checkForSubscribe} from "../../services/subscribe"
 
 function SubscribePageStep1() {
 
@@ -20,9 +21,22 @@ function SubscribePageStep1() {
 
     useEffect(() => {
 
-
         routerGuarding()
 
+
+
+        checkForSubscribe(cookies.isLog.id).then((res) => {
+
+            if(res.subscribed) {
+
+                redirectToPage("/", "alreadyExistSubscribe")
+            }
+        })
+
+
+        
+
+        
 
     }, [])
 
