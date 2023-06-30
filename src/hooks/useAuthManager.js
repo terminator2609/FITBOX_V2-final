@@ -16,7 +16,7 @@ function useAuthManager() {
 
     const routerGuarding = () => {
 
-        if (cookies.isLog === undefined && (location.pathname === "/subscribe" || location.pathname === "/cancel" || location.pathname === "/profile")) {
+        if (cookies.isLog === undefined && (location.pathname === "/subscribe" || location.pathname === "/cancel" || location.pathname === "/profile" || location.pathname === "/subscribe/step2")) {
 
             redirectToPage("/login")
 

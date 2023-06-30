@@ -2,14 +2,12 @@ import { Link } from "react-router-dom"
 import "./PopUp.css"
 import { useState } from "react"
 import useClosePage from "../../hooks/useClosePage"
-import useCookieManager from "../../hooks/useCookieManager"
 
 function PopUP(type) {
 
     const [isClosed, setIsClosed] = useState(false)
     const { closePage } = useClosePage()
 
-    const { removeCookies } = useCookieManager()
 
     type = type.type
 
@@ -20,10 +18,6 @@ function PopUP(type) {
 
         setIsClosed(true)
 
-        if (type == "successfullLogin") {
-
-            removeCookies("auth")
-        }
     }
 
 
@@ -72,6 +66,19 @@ function PopUP(type) {
             header: "404",
             pg: "Страницата, която търсеше не беше намерена",
             button: ["Начална", "/"]
+        },
+
+        successfullSubscribe: {
+            header: "Успещно плащане",
+            pg: "Вече нямаме търпение да изпратим твоята кутия",
+            button: ["Профил", "/profile"]
+        },
+
+
+        unsuccessfullSubscribe: {
+            header: "Проблем при плащането",
+            pg: "Възникна проблем при плащането, но не се притеснявай, можеш да опиташ отново",
+            button: ["Отново", "/subscribe/step2"]
         }
 
     }

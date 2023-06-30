@@ -17,6 +17,7 @@ function useCookieManager() {
         removeCookie(name)
     }
 
+
     return {addCookie, cookies, removeCookies}
 }
 

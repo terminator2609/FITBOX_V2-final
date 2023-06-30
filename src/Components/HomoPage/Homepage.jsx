@@ -260,6 +260,10 @@ function HomePage() {
 
             {location.state === "successfullLogin" ? <PopUp type="successfullLogin" /> : ""}
 
+            {location.state === "successfullSubscribe" ? <PopUp type="successfullSubscribe" /> : ""} 
+
+            {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""} 
+
 
         </>
     )

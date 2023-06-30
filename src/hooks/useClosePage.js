@@ -16,7 +16,13 @@ function useClosePage() {
         if (arg === "successfullReg") {
 
             redirectToPage("/")
+
         } else if (arg === "successfullLogin") {
+
+            redirectToPage("/")
+
+        } else if (arg == "successfullSubscribe" || arg == "unsuccessfullSubscribe") {
+            
             redirectToPage("/")
         }
 

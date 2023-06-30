@@ -3,13 +3,20 @@ import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import useAuthManager from "../../hooks/useAuthManager"
 import useClosePage from "../../hooks/useClosePage"
-
+import getFormData from "../../utilities/getFormData"
+import useError from "../../hooks/useError"
+import uniqid from "uniqid"
+import useCookieManager from "../../hooks/useCookieManager"
 
 function SubscribePageStep1() {
 
-    const {routerGuarding} = useAuthManager()
+    const { routerGuarding } = useAuthManager()
+    const { redirectToPage } = useClosePage()
 
-    const {redirectToPage} = useClosePage()
+    const {addCookie, cookies} = useCookieManager()
+
+
+    const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler } = useError({ namesIn: false, phoneNumberIn: false, cityIn: false, officeOfSpeedyIn: false }, "no", { phoneNumberForIn: false })
 
     useEffect(() => {
 
@@ -23,9 +30,26 @@ function SubscribePageStep1() {
 
         e.preventDefault()
 
-    
-        redirectToPage("/subscribe/step2")
-        
+        const data = getFormData(e.target)
+
+        const { name, phoneNumber, city, officeOfSpeedy } = data
+
+
+        if (name.length === 0 || phoneNumber === 0 || city.length === 0 || officeOfSpeedy.length === 0) {
+            errorManager("empty", data)
+        }
+
+
+        if (!Object.values(typeError).includes(true) && !Object.values(inputForIn).includes(true)) {
+
+            addCookie("person", data, 3600)
+
+            redirectToPage("/subscribe/step2", data)
+        }
+
+
+
+
     }
 
     return (
@@ -42,12 +66,17 @@ function SubscribePageStep1() {
             <main className="subscribePage">
 
                 <section className="personData">
-                    <form action="#" method="POST" onSubmit={getSubscriberData}>
+                    <form action="#" method="POST" onSubmit={getSubscriberData} onChange={resetSubmitStatus}>
+
                         <div>
-                            <input type="text" name="name" id="name" placeholder="ИМЕ" />
-                            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" />
-                            <input type="text" name="city" id="city" placeholder="ГРАД" />
-                            <input type="text" name="officeOfSpeedy" id="officeOfSpeedy" placeholder="ОФИС НА СПИЙДИ" />
+
+                            {statusText.map((a) => <span key={uniqid()} className={submitStatusClasses()}>{a}</span>)}
+
+
+                            <input type="text" name="name" id="name" placeholder="ИМЕ" className={inputIn.namesIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.name : ""} />
+                            <input type="number" onBlur={formatErrorHandler} name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" className={inputIn.phoneNumberIn || inputForIn.phoneNumberForIn ? "error" : ""} defaultValue = {cookies.person ? cookies.person.phoneNumber : ""}/>
+                            <input type="text" name="city" id="city" placeholder="ГРАД" className={inputIn.cityIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.city : ""}/>
+                            <input type="text" name="officeOfSpeedy" id="officeOfSpeedy" placeholder="ОФИС НА СПИЙДИ" className={inputIn.officeOfSpeedyIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.officeOfSpeedy : ""} />
 
                         </div >
 

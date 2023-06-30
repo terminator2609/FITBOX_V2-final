@@ -22,21 +22,30 @@ main.subscribePage {
     margin-left: 3%;
 }
 
-main.subscribePage section:nth-of-type(1) {
+main.subscribePage section.personData {
     width: 100%;
 }
 
-main.subscribePage section:nth-of-type(1) form {
+main.subscribePage section.personData form {
     width: 100%;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) {
+main.subscribePage section.personData form>div:nth-of-type(1) {
     width: 100%;
 }
 
+main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+    font-size: 15px;
+    /* display: none; */
+    line-height: 1.2;
+    margin-bottom: 10%;
+    color: #ff3131;
+    display: block;
+}
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+
+main.subscribePage section.personData form>div:nth-of-type(1) input,
+main.subscribePage section.personData form>div:nth-of-type(1) select {
     background: none;
     border-top: none;
     border-left: none;
@@ -53,55 +62,69 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
     border-radius: 0px;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+
+main.subscribePage section.personData form>div:nth-of-type(1) input.error {
+    color: #ff3131;
+    border-bottom: 1px solid #ff3131;
+}
+
+main.subscribePage section.personData form>div:nth-of-type(1) input::placeholder {
+    color: #ffffff;
+}
+
+main.subscribePage section.personData form>div:nth-of-type(1) input.error::placeholder {
+    color: #ff3131;
+}
+
+main.subscribePage section.personData form>div:nth-of-type(1) select {
     background-color: #000000 !important;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+main.subscribePage section.personData form>div:nth-of-type(1) select option {
     min-width: 10%;
     font-size: 12px;
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-webkit-input-placeholder {
+main.subscribePage section.personData form>div:nth-of-type(1) input::-webkit-input-placeholder {
     color: #ffffff;
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-moz-placeholder {
+main.subscribePage section.personData form>div:nth-of-type(1) input::-moz-placeholder {
     color: #ffffff;
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:-ms-input-placeholder {
+main.subscribePage section.personData form>div:nth-of-type(1) input:-ms-input-placeholder {
     color: #ffffff;
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::-ms-input-placeholder {
+main.subscribePage section.personData form>div:nth-of-type(1) input::-ms-input-placeholder {
     color: #ffffff;
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input::placeholder {
+main.subscribePage section.personData form>div:nth-of-type(1) input::placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n+2),
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+main.subscribePage section.personData form>div:nth-of-type(1) input:nth-of-type(n+2),
+main.subscribePage section.personData form>div:nth-of-type(1) select {
     margin-top: 40px;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:focus,
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select:focus {
+main.subscribePage section.personData form>div:nth-of-type(1) input:focus,
+main.subscribePage section.personData form>div:nth-of-type(1) select:focus {
     outline: none !important;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option:checked {
+main.subscribePage section.personData form>div:nth-of-type(1) select option:checked {
     background-color: #d1ec3e;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+main.subscribePage section.personData form>div:nth-of-type(2) div {
     margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -113,7 +136,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
     position: relative;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
     border: 1px solid #ffffff;
     width: 13px;
     height: 13px;
@@ -121,7 +144,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.check
     position: relative;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
     font-size: 13px;
     color: #d1ec3e;
     display: block;
@@ -131,7 +154,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.check
 
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+main.subscribePage section.personData form>div:nth-of-type(2) div input {
     display: block;
     background: none;
     border: 1px solid #ffffff;
@@ -143,7 +166,7 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
     width: 13px;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+main.subscribePage section.personData form>div:nth-of-type(2) div p {
     color: #ffffff;
     font-size: 12px;
     width: 85%;
@@ -151,25 +174,13 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
     position: relative;
 }
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+main.subscribePage section.personData form>div:nth-of-type(2) div p span {
     position: absolute;
     top: 40px;
 }
 
 
-main.subscribePage section:nth-of-type(2) {
-    margin-top: 55%;
-}
-
-main.subscribePage section:nth-of-type(2) h1 {
-    font-weight: 500;
-    font-size: 12vi;
-    line-height: 1.3;
-    color: #ffffff;
-}
-
-
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+main.subscribePage section.typeOfPayment article:nth-of-type(1) {
     margin-top: 50px;
     background-color: #d1ec3e;
     padding: 25px 15px;
@@ -179,12 +190,12 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
 
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
     font-size: 8vi;
     margin-bottom: 30px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -195,7 +206,7 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type
     gap: 20px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -205,26 +216,26 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type
     gap: 10px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
     font-size: 18px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
     font-size: 14px;
     width: 70%;
 }
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) {
     margin-top: 60px;
     width: 100%;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form {
     width: 100%;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -234,9 +245,10 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     flex-direction: column;
     gap: 25px;
     margin-left: 3%;
+    margin-bottom: 30px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -245,10 +257,11 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     align-items: start;
     gap: 10px;
     position: relative;
+    
 }
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
     border: 1px solid #ffffff;
     width: 13px;
     height: 13px;
@@ -256,17 +269,16 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     position: relative;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
     font-size: 13px;
     color: #d1ec3e;
-    display: none;
     position: absolute;
     top: 2%;
     left: 5%;
 
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
     display: block;
     background: none;
     border: 1px solid #ffffff;
@@ -278,19 +290,19 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     width: 13px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
     color: #ffffff;
     font-size: 18px;
     width: 85%;
 }
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
     margin-top: 60px;
     width: 100%;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
     background: none;
     border-top: none;
     border-left: none;
@@ -303,37 +315,48 @@ main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of
     font-family: Montserrat;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-webkit-input-placeholder {
+
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData>div {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    margin-top: 40px;
+    gap: 17%;
+}
+
+
+
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input::-webkit-input-placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-moz-placeholder {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input::-moz-placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:-ms-input-placeholder {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input:-ms-input-placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::-ms-input-placeholder {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input::-ms-input-placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input::placeholder {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input::placeholder {
     color: #ffffff;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:nth-of-type(n+2) {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData>input:nth-of-type(n+2) {
     margin-top: 40px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:focus {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input:focus {
     outline: none !important;
 }
 
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3),
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button,
+main.subscribePage section.personData form>div:nth-of-type(3) {
     margin-top: 80px;
     padding-bottom: 30px;
     display: -webkit-box;
@@ -346,12 +369,12 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
 }
 
 
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+main.subscribePage section.personData form>div:nth-of-type(3) {
     margin-top: 120px;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button input,
+main.subscribePage section.personData form>div:nth-of-type(3) input {
     background: none;
     border: none;
     color: #d1ec3e;
@@ -362,8 +385,8 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
     cursor: pointer;
 }
 
-main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
-main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
+main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button i,
+main.subscribePage section.personData form>div:nth-of-type(3) i {
     color: #d1ec3e;
     font-size: 15px;
     cursor: pointer;
@@ -385,146 +408,145 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         margin-top: 20%;
     }
 
+    main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 20px;
+    }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input,
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         font-size: 20px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+    main.subscribePage section.personData form>div:nth-of-type(1) select option {
         font-size: 17px;
         margin-left: 10px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+    main.subscribePage section.personData form>div:nth-of-type(2) div {
         margin-top: 25px;
         gap: 12px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
         width: 16px;
         height: 16px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
         font-size: 16px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+    main.subscribePage section.personData form>div:nth-of-type(2) div input {
         left: -0.5%;
         top: -20%;
         width: 16px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p {
         font-size: 14px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p span {
         top: 45px;
     }
 
-    main.subscribePage section:nth-of-type(2) {
-        margin-top: 35%;
-    }
 
-
-    main.subscribePage section:nth-of-type(2) h1 {
-        font-size: 10vi;
-    }
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) {
         margin-top: 55px;
         padding: 30px 20px;
         width: 72%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
         font-size: 7vi;
         margin-bottom: 35px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
         gap: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
         gap: 15px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
         font-size: 20px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
         font-size: 16px;
         width: 75%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) {
         margin-top: 70px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
         gap: 30px;
         margin-left: 1.5%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
         gap: 12px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
         width: 16px;
         height: 16px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+        font-size: 16px;
+    }
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
         left: -0.4%;
         top: -15%;
         width: 16px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
         font-size: 20px;
         width: 100%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
         margin-top: 70px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
         font-size: 20px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    main.subscribePage section.personData form>div:nth-of-type(3) {
         margin-top: 130px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button {
         margin-top: 90px;
     }
 
-    
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button input,
+    main.subscribePage section.personData form>div:nth-of-type(3) input {
         font-size: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button i,
+    main.subscribePage section.personData form>div:nth-of-type(3) i {
         font-size: 20px;
     }
 
@@ -546,144 +568,143 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         margin-top: 30%;
     }
 
+    main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 22px;
+    }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input,
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         font-size: 22px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+    main.subscribePage section.personData form>div:nth-of-type(1) select option {
         font-size: 19px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+    main.subscribePage section.personData form>div:nth-of-type(2) div {
         margin-top: 30px;
         gap: 15px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
         width: 20px;
         height: 20px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
         font-size: 20px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+    main.subscribePage section.personData form>div:nth-of-type(2) div input {
         left: -0.5%;
         top: -22%;
         width: 20px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p {
         font-size: 16px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p span {
         top: 30px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) {
-        margin-top: 40%;
-    }
-
-
-    main.subscribePage section:nth-of-type(2) h1 {
-        font-size: 10vi;
-    }
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) {
         margin-top: 60px;
         padding: 35px 25px;
         width: 75%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
         font-size: 7vi;
         margin-bottom: 40px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
         gap: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
         gap: 20px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
         font-size: 22px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
         font-size: 18px;
         width: 85%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) {
         margin-top: 80px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
         gap: 35px;
         margin-left: 1.5%;
+        margin-bottom: 35px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
         gap: 15px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
         width: 20px;
         height: 20px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+        font-size: 20px;
+    }
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
         left: -0.6%;
         top: -15%;
         width: 20px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
         font-size: 22px;
         width: 100%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
         margin-top: 80px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
         font-size: 22px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    main.subscribePage section.personData form>div:nth-of-type(3) {
         margin-top: 140px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button {
         margin-top: 100px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button input,
+    main.subscribePage section.personData form>div:nth-of-type(3) input {
         font-size: 35px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button i,
+    main.subscribePage section.personData form>div:nth-of-type(3) i {
         font-size: 25px;
     }
 
@@ -703,155 +724,161 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
         margin-top: 22%;
     }
 
+    main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 25px;
+        margin-bottom: 6%;
+    }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input,
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         font-size: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         margin-top: 45px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+    main.subscribePage section.personData form>div:nth-of-type(1) select option {
         font-size: 22px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+    main.subscribePage section.personData form>div:nth-of-type(2) div {
         margin-top: 35px;
         gap: 20px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
         width: 22px;
         height: 22px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
         font-size: 22px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+    main.subscribePage section.personData form>div:nth-of-type(2) div input {
         left: -0.3%;
         top: -15%;
         width: 22px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p {
         font-size: 18px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p span {
         top: 35px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) {
-        margin-top: 30%;
-    }
-
-
-    main.subscribePage section:nth-of-type(2) h1 {
-        font-size: 8vi;
-    }
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) {
         margin-top: 70px;
         padding: 40px 30px;
         width: 70%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
         font-size: 6.5vi;
         margin-bottom: 50px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
         gap: 40px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
         gap: 22px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
         font-size: 25px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
         font-size: 20px;
         width: 90%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) {
         margin-top: 90px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
         gap: 40px;
         margin-left: 1.5%;
+        margin-bottom: 40px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
         gap: 20px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
         width: 22px;
         height: 22px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+        font-size: 22px;
+    }
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
         left: -0.4%;
         top: -12%;
         width: 22px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
         font-size: 24px;
         width: 100%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
         margin-top: 90px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
         font-size: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:nth-of-type(n + 2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input:nth-of-type(n + 2) {
         margin-top: 45px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData>div {
+        align-items: baseline;
+        margin-top: 0px;
+        gap: 57%;
+    }
+
+    main.subscribePage section.personData form>div:nth-of-type(3) {
         margin-top: 160px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button {
         margin-top: 120px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button input,
+    main.subscribePage section.personData form>div:nth-of-type(3) input {
         font-size: 40px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button i,
+    main.subscribePage section.personData form>div:nth-of-type(3) i {
         font-size: 30px;
     }
 
@@ -872,153 +899,159 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 28px;
+        margin-bottom: 5%;
+        width: 50%;
+    }
+
+
+    main.subscribePage section.personData form>div:nth-of-type(1) input,
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         font-size: 28px;
         width: 60%;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         margin-top: 50px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+    main.subscribePage section.personData form>div:nth-of-type(1) select option {
         font-size: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+    main.subscribePage section.personData form>div:nth-of-type(2) div {
         margin-top: 40px;
         gap: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
         width: 25px;
         height: 25px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
         font-size: 25px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+    main.subscribePage section.personData form>div:nth-of-type(2) div input {
         top: -10%;
         width: 25px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p {
         font-size: 19px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p span {
         top: 40px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) {
-        margin-top: 25%;
-    }
-
-
-    main.subscribePage section:nth-of-type(2) h1 {
-        font-size: 6vi;
-    }
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) {
         margin-top: 80px;
         padding: 45px 35px;
         width: 60%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
         font-size: 5.5vi;
         margin-bottom: 60px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
         gap: 50px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
         gap: 25px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
         font-size: 28px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
         font-size: 24px;
         width: 100%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) {
         margin-top: 100px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
         gap: 50px;
         margin-left: 1.5%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
         gap: 25px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
         width: 25px;
         height: 25px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+        font-size: 25px;
+    }
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
         left: -0.3%;
         width: 25px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
         font-size: 28px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
         margin-top: 100px;
     }
 
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData>div {
+        gap: 60%;
+        width: 60%;
+    }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
         font-size: 28px;
         width: 60%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:nth-of-type(n + 2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input:nth-of-type(n + 2) {
         margin-top: 50px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button {
         margin-top: 140px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    main.subscribePage section.personData form>div:nth-of-type(3) {
         margin-top: 170px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button input,
+    main.subscribePage section.personData form>div:nth-of-type(3) input {
         font-size: 50px;
         margin-left: -1%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) i,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button i,
+    main.subscribePage section.personData form>div:nth-of-type(3) i {
         font-size: 40px;
     }
 
@@ -1038,142 +1071,149 @@ main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) i {
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input,
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 32px;
+        margin-bottom: 4%;
+    }
+
+
+
+    main.subscribePage section.personData form>div:nth-of-type(1) input,
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         font-size: 32px;
         width: 55%;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) input:nth-of-type(n + 2),
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select {
+    main.subscribePage section.personData form>div:nth-of-type(1) input:nth-of-type(n + 2),
+    main.subscribePage section.personData form>div:nth-of-type(1) select {
         margin-top: 60px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(1) select option {
+    main.subscribePage section.personData form>div:nth-of-type(1) select option {
         font-size: 29px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div {
+    main.subscribePage section.personData form>div:nth-of-type(2) div {
         margin-top: 50px;
         gap: 30px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark {
         width: 28px;
         height: 28px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div span.checkmark i {
+    main.subscribePage section.personData form>div:nth-of-type(2) div span.checkmark i {
         font-size: 28px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div input {
+    main.subscribePage section.personData form>div:nth-of-type(2) div input {
         top: -10%;
         width: 28px;
         left: -0.15%;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p {
         font-size: 22px;
     }
 
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(2) div p span {
+    main.subscribePage section.personData form>div:nth-of-type(2) div p span {
         top: 45px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) {
-        margin-top: 18%;
-    }
-
-
-    main.subscribePage section:nth-of-type(2) h1 {
-        font-size: 4vi;
-    }
-
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) {
         margin-top: 90px;
         padding: 55px 45px;
         width: 50%;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1) h2 {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1) h2 {
         font-size: 4vi;
         margin-bottom: 70px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) {
         gap: 60px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div {
         gap: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div i {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div i {
         font-size: 32px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(1)>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(1)>div:nth-of-type(1) div p {
         font-size: 28px;
         width: 100%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) {
         margin-top: 110px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) {
         gap: 60px;
         margin-left: 1%;
+        margin-bottom: 50px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div {
         gap: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark {
         width: 30px;
         height: 30px;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div span.checkmark i {
+        font-size: 30px;
+    }
+
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div input {
         left: -0.2%;
         width: 30px;
         top: -9%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(1) div p {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div:nth-of-type(1) div p {
         font-size: 32px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData {
         margin-top: 110px;
     }
 
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData>div {
+        width: 55%;
+        gap: 55%;
+    }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input {
         font-size: 32px;
         width: 55%;
     }
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(2) input:nth-of-type(n + 2) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.bankingData input:nth-of-type(n + 2) {
         margin-top: 60px;
     }
 
 
-    main.subscribePage section:nth-of-type(2) article:nth-of-type(2) form>div:nth-of-type(3) {
+    main.subscribePage section.typeOfPayment article:nth-of-type(2) form>div.button {
         margin-top: 160px;
     }
 
-    main.subscribePage section:nth-of-type(1) form>div:nth-of-type(3) {
+    main.subscribePage section.personData form>div:nth-of-type(3) {
         margin-top: 180px;
     }
 

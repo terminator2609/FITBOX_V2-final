@@ -1,9 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const useSelectCheckbox = (arg) => {
 
     const [isSelected, setIsSelected] = useState(arg)
+    const [type, setType] = useState([])
 
+    useEffect(() => {
+
+        if (type[0] === "selectJustOne") {
+
+            const isSelectedObject = { ...isSelected }
+
+
+            isSelectedObject[type[1]] = true
+
+
+            setIsSelected(isSelectedObject)
+
+            
+        }
+
+    }, [type])
 
     const resetIsSelectState = () => {
 
@@ -13,10 +30,10 @@ const useSelectCheckbox = (arg) => {
     const selectExactlyOne = (e) => {
 
         const firstChar = e.target.id.slice(0, 1).toUpperCase()
-        
+
         const inputId = "is" + firstChar + e.target.id.slice(1)
 
-      
+
         if (isSelected[inputId]) {
 
             setIsSelected(arg)
@@ -30,10 +47,28 @@ const useSelectCheckbox = (arg) => {
         }
     }
 
+
+    const selectJustOne = (e) => {
+
+        const firstChar = e.target.id.slice(0, 1).toUpperCase()
+
+        const inputId = "is" + firstChar + e.target.id.slice(1)
+
+        setType(["selectJustOne", inputId])
+
+        setIsSelected(arg)
+
+
+
+
+
+    }
+
     return {
         isSelected,
         resetIsSelectState,
-        selectExactlyOne
+        selectExactlyOne,
+        selectJustOne
     }
 }
 
