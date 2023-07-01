@@ -17,8 +17,9 @@ function HomePage() {
     const [searchParams, setSearchParams] = useSearchParams()
     const { cookies } = useCookieManager()
     const location = useLocation()
+    const [isSubscribed, setIsSubcribed] = useState(false)
 
-    
+
 
     useEffect(() => {
 
@@ -63,6 +64,18 @@ function HomePage() {
         }
 
 
+        if (cookies.isLog) {
+
+            getUserDataById(cookies.isLog.id).then((res) => {
+
+                if (res.user.subscribed) {
+                    setIsSubcribed(true)
+                } else {
+                    setIsSubcribed(false)
+                }
+
+            })
+        }
 
         // eslint-disable-next-line
     }, [])
@@ -215,12 +228,20 @@ function HomePage() {
 
                             </article>
 
-                            <article>
 
-                                <Link to="/cancel">Канселирай</Link>
-                                <i className="fa-solid fa-arrow-right-long"></i>
+                            {isSubscribed ?
 
-                            </article>
+                                <article>
+
+                                    <Link to="/cancel">Канселирай</Link>
+                                    <i className="fa-solid fa-arrow-right-long"></i>
+
+                                </article>
+
+                                : ""
+                            }
+
+
 
                         </>
 
@@ -260,11 +281,11 @@ function HomePage() {
 
             {location.state === "successfullLogin" ? <PopUp type="successfullLogin" /> : ""}
 
-            {location.state === "successfullSubscribe" ? <PopUp type="successfullSubscribe" /> : ""} 
+            {location.state === "successfullSubscribe" ? <PopUp type="successfullSubscribe" /> : ""}
 
-            {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""} 
+            {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""}
 
-            {location.state === "alreadyExistSubscribe" ? <PopUp type="alreadyExistSubscribe"/> : ""}
+            {location.state === "alreadyExistSubscribe" ? <PopUp type="alreadyExistSubscribe" /> : ""}
 
 
         </>

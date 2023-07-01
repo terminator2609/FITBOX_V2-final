@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import Navigation from "../Navigation/Navigation"
 import useAuthManager from "../../hooks/useAuthManager"
@@ -13,32 +13,35 @@ import useCookieManager from "../../hooks/useCookieManager"
 function SubscribePageStep2() {
 
     const { routerGuarding } = useAuthManager()
-    const { selectJustOne, isSelected} = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
+    const { selectJustOne, isSelected } = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
     const { redirectToPage } = useClosePage()
 
-    const { cookies, removeCookies } = useCookieManager()
+    const { cookies, removeCookies, addCookie } = useCookieManager()
 
 
     useEffect(() => {
 
         routerGuarding()
 
-        
+
 
         if (!cookies.person) {
             redirectToPage("/subscribe")
         }
 
 
-        checkForSubscribe(cookies.isLog.id).then((res) => {
+        if (cookies.isLog) {
+            checkForSubscribe(cookies.isLog.id).then((res) => {
 
-            if(res.subscribed) {
+                if (res.subscribed) {
 
-                redirectToPage("/", "alreadyExistSubscribe")
-            }
-        })
+                    redirectToPage("/", "alreadyExistSubscribe")
+                }
+            })
 
-        
+        }
+
+
 
     }, [])
 
@@ -83,7 +86,7 @@ function SubscribePageStep2() {
         const request = await postNewSubscribe(data).catch(() => redirectToPage("/", "unsuccessfullSubscribe"))
 
 
-        if(request) {
+        if (request) {
 
             removeCookies("person")
 

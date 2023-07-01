@@ -26,16 +26,18 @@ main.profilePage {
     width: 95%;
     margin-left: 3%;
     padding-bottom: 40px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-
-main.profilePage a {
+main.profilePage div a {
     font-size: 11.6vi;
     color: #d1ec3e;
     font-weight: 500;
 }
 
-main.profilePage i {
+main.profilePage div i {
     font-size: 7.6vi;
     color: #d1ec3e;
     margin-left: 5%;
@@ -68,9 +70,10 @@ main.profilePage i {
 
     main.profilePage {
         margin-top: 35%;
+        gap: 25px;
     }
 
-    main.profilePage a {
+    main.profilePage div a {
         font-size: 10vi;
     }
 
@@ -101,9 +104,10 @@ main.profilePage i {
 
     main.profilePage {
         margin-top: 80%;
+        gap: 30px;
     }
 
-    main.profilePage a {
+    main.profilePage div a {
         font-size: 10vi;
     }
 
@@ -134,10 +138,11 @@ main.profilePage i {
     main.profilePage {
         margin-top: 25%;
         padding-bottom: 50px;
+        gap: 35px;
     }
 
-    main.profilePage a {
-        font-size: 9.6vi;
+    main.profilePage div a {
+        font-size: 8vi;
     }
 }
 
@@ -162,11 +167,16 @@ main.profilePage i {
         font-size: 23px;
     }
 
-    main.profilePage a {
-        font-size: 6.6vi;
+    main.profile {
+        gap: 40px;
     }
 
-    main.profilePage i {
+    main.profilePage div a {
+        font-size: 6.6vi;
+    }
+    
+
+    main.profilePage div i {
         font-size: 4.6vi;
     }
 
@@ -196,13 +206,14 @@ main.profilePage i {
     main.profilePage {
         margin-top: 18%;
         padding-bottom: 40px;
+        gap: 45px;
     }
 
-    main.profilePage a {
+    main.profilePage div a {
         font-size: 5.6vi;
     }
 
-    main.profilePage i {
+    main.profilePage div i {
         font-size: 3.6vi;
     }
 
