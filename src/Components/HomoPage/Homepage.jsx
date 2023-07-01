@@ -8,6 +8,7 @@ import PopUp from "../PopUp/PopUp"
 import { useSearchParams } from "react-router-dom"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import useCookieManager from "../../hooks/useCookieManager"
+import useClosePage from "../../hooks/useClosePage"
 
 
 
@@ -15,9 +16,10 @@ function HomePage() {
 
     const [confirmStatus, setConfirmStatus] = useState({ successfullConfirm: false, profilNoExist: false, profilAlreadyConfirm: false })
     const [searchParams, setSearchParams] = useSearchParams()
-    const { cookies } = useCookieManager()
+    const { cookies, removeCookies } = useCookieManager()
     const location = useLocation()
     const [isSubscribed, setIsSubcribed] = useState(false)
+    const { redirectToPage } = useClosePage()
 
 
 
@@ -68,12 +70,21 @@ function HomePage() {
 
             getUserDataById(cookies.isLog.id).then((res) => {
 
-                if (res.user.subscribed) {
-                    setIsSubcribed(true)
+                if (res.ok) {
+                    if (res.user.subscribed) {
+                        setIsSubcribed(true)
+                    } else {
+                        setIsSubcribed(false)
+                    }
                 } else {
-                    setIsSubcribed(false)
+                    removeCookies("isLog")
+                    redirectToPage("/")
                 }
 
+
+            }).catch(() => {
+                removeCookies("isLog")
+                redirectToPage("/serverError")
             })
         }
 
@@ -286,6 +297,8 @@ function HomePage() {
             {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""}
 
             {location.state === "alreadyExistSubscribe" ? <PopUp type="alreadyExistSubscribe" /> : ""}
+
+            {location.state === "successfullCancel" ? <PopUp type="successfullCancel" /> : ""}
 
 
         </>

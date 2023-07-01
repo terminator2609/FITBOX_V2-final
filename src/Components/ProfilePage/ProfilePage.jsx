@@ -10,7 +10,7 @@ import useClosePage from "../../hooks/useClosePage"
 function ProfilePage() {
 
     const { routerGuarding } = useAuthManager()
-    const { removeCookies, cookies, addCookie } = useCookieManager()
+    const { removeCookies, cookies } = useCookieManager()
     const { redirectToPage } = useClosePage()
     const [userInfo, setUserInfo] = useState("")
 
@@ -33,26 +33,39 @@ function ProfilePage() {
 
             getUserDataById(cookies.isLog.id).then((res) => {
 
-                let data = res.user
+                if (res.ok) {
+                    let data = res.user
 
-                let name = data.name.split(" ")
+                    let name = data.name.split(" ")
 
-                data.name = name[0]
+                    data.name = name[0]
 
-                if (data.subscribed) {
+                    if (data.subscribed) {
 
-                    const newDate = new Date(data.subscribedTable.dateSubscribe)
+                        const newDate = new Date(data.subscribedTable.dateSubscribe)
 
-                    console.log(data)
+                        console.log(data)
 
-                    data.subscribedTable.dateSubscribe = newDate.getDate() < 10 ? `0${newDate.getDate()}` : newDate.getDate()
+                        data.subscribedTable.dateSubscribe = newDate.getDate() < 10 ? `0${newDate.getDate()}` : newDate.getDate()
+                    }
+
+
+
+                    setUserInfo(data)
+
+                } else {
+
+                    removeCookies("isLog")
+
+                    redirectToPage("/")
+
                 }
 
 
-
-                setUserInfo(data)
-
-
+            }).catch(() => {
+                
+                removeCookies("isLog")
+                redirectToPage("/serverError")
             })
         }
 

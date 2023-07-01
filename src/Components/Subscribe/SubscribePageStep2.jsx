@@ -1,4 +1,4 @@
-import { useEffect} from "react"
+import { useEffect } from "react"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import Navigation from "../Navigation/Navigation"
 import useAuthManager from "../../hooks/useAuthManager"
@@ -16,7 +16,7 @@ function SubscribePageStep2() {
     const { selectJustOne, isSelected } = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
     const { redirectToPage } = useClosePage()
 
-    const { cookies, removeCookies, addCookie } = useCookieManager()
+    const { cookies, removeCookies} = useCookieManager()
 
 
     useEffect(() => {
@@ -33,10 +33,20 @@ function SubscribePageStep2() {
         if (cookies.isLog) {
             checkForSubscribe(cookies.isLog.id).then((res) => {
 
-                if (res.subscribed) {
+                if (res.ok) {
+                    if (res.subscribed) {
 
-                    redirectToPage("/", "alreadyExistSubscribe")
+                        redirectToPage("/", "alreadyExistSubscribe")
+                    }
+                } else {
+                    removeCookies("isLog")
+                    redirectToPage("/")
                 }
+
+
+            }).catch(() => {
+                removeCookies("isLog")
+                redirectToPage("/serverError")
             })
 
         }
@@ -91,6 +101,8 @@ function SubscribePageStep2() {
             removeCookies("person")
 
             redirectToPage("/", "successfullSubscribe")
+        } else {
+            redirectToPage("/", "unsuccessfullSubscribe")
         }
     }
 

@@ -23,4 +23,18 @@ function checkForSubscribe(id) {
 }
 
 
-export { postNewSubscribe, checkForSubscribe }
+function cancelSubscribeData(data) {
+
+    return fetch(`${baseUrl}/subscribe/cancel`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify(data)
+    })
+    .then((res) => res.json())
+}
+
+
+export { postNewSubscribe, checkForSubscribe, cancelSubscribeData }

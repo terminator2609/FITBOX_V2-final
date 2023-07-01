@@ -27,6 +27,7 @@ function App() {
         <Route path="/newPass" element={<NewPassPage />} />
         <Route path="/registration" element={<RegistrationPage />} />s
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/serverError" element={<PopUP type="serverError"/>}/>
         <Route path="*" element={<PopUP type="404" />} />
 
       </Routes>

@@ -14,7 +14,7 @@ function SubscribePageStep1() {
     const { routerGuarding } = useAuthManager()
     const { redirectToPage } = useClosePage()
 
-    const { addCookie, cookies } = useCookieManager()
+    const { addCookie, cookies, removeCookies } = useCookieManager()
 
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler } = useError({ namesIn: false, phoneNumberIn: false, cityIn: false, officeOfSpeedyIn: false }, "no", { phoneNumberForIn: false })
@@ -27,10 +27,20 @@ function SubscribePageStep1() {
         if (cookies.isLog) {
             checkForSubscribe(cookies.isLog.id).then((res) => {
 
-                if (res.subscribed) {
+                if (res.ok) {
+                    if (res.subscribed) {
 
-                    redirectToPage("/", "alreadyExistSubscribe")
+                        redirectToPage("/", "alreadyExistSubscribe")
+                    }
+                } else {
+                    removeCookies("isLog")
+                    redirectToPage("/")
                 }
+
+
+            }).catch(() => {
+                removeCookies("isLog")
+                redirectToPage("/serverError")
             })
 
         }
