@@ -1,4 +1,4 @@
-const baseUrl = "https://healthy-seal-stockings.cyclic.app"
+const baseUrl = "https://gray-wicked-magpie.cyclic.app"
 
 // const baseUrl = "http://localhost:5000"
 
