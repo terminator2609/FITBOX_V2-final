@@ -26,37 +26,37 @@ function NewPassPage() {
         routerGuarding()
 
 
-        // if (!location.search.includes("email") || !location.hash.includes("id")) {
+        if (!location.search.includes("email") || !location.hash.includes("id")) {
 
-        //     redirectToPage("/forgotenPass")
-        // } 
+            redirectToPage("/forgotenPass")
+        } 
         
-        // else {
+        else {
 
-        //     let userId = location.hash.split("=")
+            let userId = location.hash.split("=")
 
-        //     const link = location.search + location.hash
+            const link = location.search + location.hash
 
-        //     userId = userId[1]
+            userId = userId[1]
 
-        //     getUserDataById(userId).then((res) => {
+            getUserDataById(userId).then((res) => {
 
-        //         if (res.ok) {
+                if (res.ok) {
 
-        //             if (res.user.successfullRequestForChangePass.includes(link)) {
+                    if (res.user.successfullRequestForChangePass.includes(link)) {
 
-        //                 redirectToPage("/", "noValidNewPassLink")
-        //             }
-        //         } else {
-        //             redirectToPage("/", "profileNoExist")
-        //         }
-        //     }).catch(() => {
+                        redirectToPage("/", "noValidNewPassLink")
+                    }
+                } else {
+                    redirectToPage("/", "profileNoExist")
+                }
+            }).catch(() => {
 
-        //         redirectToPage("/serverError")
+                redirectToPage("/serverError")
                 
-        //     })
+            })
 
-        // }
+        }
 
 
 
