@@ -134,7 +134,7 @@ function HomePage() {
                         <h1>Вдъхновени от страха да бъдем посредствени!</h1>
 
                         <p>Абонаментната кутия
-                            FITBOX струва 48.88 лева
+                            FITBOX&copy; струва 48.88 лева
                             на месец, като в нея ще
                             откриваш между 4 и 7
                             снак и лайфстайл
@@ -191,7 +191,7 @@ function HomePage() {
 
                         <div>
                             <h2>.02</h2>
-                            <p>FITBOX пристига при теб с безплатна доставка</p>
+                            <p>FITBOX&copy; пристига при теб с безплатна доставка</p>
                         </div>
 
                         <div>
@@ -205,8 +205,8 @@ function HomePage() {
                     <article>
                         <h1>А,</h1>
                         <h1>плащането?</h1>
-                        <p>FITBOX работи с изцяло виртуален, защитен метод на плащане с възобновяем характер. Например заплащаш
-                            своя FITBOX през май и го получаваш в началото на месец юни...
+                        <p>FITBOX&copy; работи с изцяло виртуален, защитен метод на плащане с възобновяем характер. Например заплащаш
+                            своя FITBOX&copy; през май и го получаваш в началото на месец юни...
                         </p>
                     </article>
 
@@ -280,7 +280,7 @@ function HomePage() {
                         <img src="/media/partner.png" alt="partner" />
                     </article>
 
-                    <p>*Ако желаеш да продаваш с FITBOX, просто ни пиши на office@myfitbox.bg</p>
+                    <p>*Ако желаеш да продаваш с FITBOX&copy;, просто ни пиши на office@myfitbox.bg</p>
                 </section>
             </main>
 
@@ -291,21 +291,8 @@ function HomePage() {
             {confirmStatus.profilNoExist ? <PopUp type="profileNoExist" /> : ""}
 
 
-            {location.state === "successfullLogin" ? <PopUp type="successfullLogin" /> : ""}
+            {location.state ? <PopUp type={location.state} /> : ""}
 
-            {location.state === "successfullSubscribe" ? <PopUp type="successfullSubscribe" /> : ""}
-
-            {location.state === "unsuccessfullSubscribe" ? <PopUp type="unsuccessfullSubscribe" /> : ""}
-
-            {location.state === "alreadyExistSubscribe" ? <PopUp type="alreadyExistSubscribe" /> : ""}
-
-            {location.state === "successfullCancel" ? <PopUp type="successfullCancel" /> : ""}
-
-            {location.state === "successfullPassChange" ? <PopUp type="successfullPassChange" /> : ""}
-
-            {location.state === "noValidNewPassLink" ? <PopUp type="noValidNewPassLink" /> : ""}
-
-            {location.state === "profileNoExist" ? <PopUp type="profileNoExist" /> : ""}
         </>
     )
 }

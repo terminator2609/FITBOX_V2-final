@@ -103,7 +103,7 @@ function SubscribePageStep1() {
                             <input type="text" name="name" id="name" placeholder="ИМЕ" className={inputIn.namesIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.name : ""} />
                             <input type="number" onBlur={formatErrorHandler} name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" className={inputIn.phoneNumberIn || inputForIn.phoneNumberForIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.phoneNumber : ""} />
                             <input type="text" name="city" id="city" placeholder="ГРАД" className={inputIn.cityIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.city : ""} />
-                            <input type="text" name="officeOfSpeedy" id="officeOfSpeedy" placeholder="ОФИС НА СПИЙДИ" className={inputIn.officeOfSpeedyIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.officeOfSpeedy : ""} />
+                            <input type="text" name="officeOfSpeedy" id="officeOfSpeedy" placeholder="ОФИС НА СПИДИ" className={inputIn.officeOfSpeedyIn ? "error" : ""} defaultValue={cookies.person ? cookies.person.officeOfSpeedy : ""} />
 
                         </div >
 

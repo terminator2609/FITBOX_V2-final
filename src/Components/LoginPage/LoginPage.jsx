@@ -8,21 +8,21 @@ import useSelectCheckbox from "../../hooks/useSelectCheckbox"
 import useCookieManager from "../../hooks/useCookieManager"
 import uniqid from "uniqid"
 import useClosePage from "../../hooks/useClosePage"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useAuthManager from "../../hooks/useAuthManager"
 
 
 function LoginPage() {
 
     const { routerGuarding } = useAuthManager()
-
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, isAuthSubmitStatus } = useError({ emailIn: false, passwordIn: false }, "no", { emailForIn: false })
 
     const { selectExactlyOne, isSelected, resetIsSelectState, } = useSelectCheckbox({ isRemember: false })
-
     const { addCookie } = useCookieManager()
-
     const { redirectToPage } = useClosePage()
+
+
+    const [isSubmit, setIsSubmit] = useState(false)
 
     useEffect(() => {
 
@@ -36,6 +36,7 @@ function LoginPage() {
 
         e.preventDefault()
 
+        setIsSubmit(true)
 
         const data = getFormData(e.target)
 
@@ -60,9 +61,9 @@ function LoginPage() {
                     if (request.confirmedProfil) {
 
                         if (remember) {
-                            addCookie("isLog", {id: request.id}, 604800)
+                            addCookie("isLog", { id: request.id }, 604800)
                         } else {
-                            addCookie("isLog", {id: request.id}, 3600)
+                            addCookie("isLog", { id: request.id }, 3600)
                         }
 
 
@@ -89,6 +90,7 @@ function LoginPage() {
 
         }
 
+        setIsSubmit(false)
 
     }
 
@@ -143,10 +145,15 @@ function LoginPage() {
                     </div>
 
 
-                    <div>
-                        <input type="submit" value="Вход" />
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
+                    {!isSubmit ?
+                        <div>
+                            <input type="submit" value="Вход" />
+                            <i className="fa-solid fa-arrow-right-long"></i>
+                        </div>
+
+                        : ""
+                    }
+
                 </form>
 
             </main>
