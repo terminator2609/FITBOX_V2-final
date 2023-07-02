@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import useAuthManager from "../../hooks/useAuthManager"
@@ -16,6 +16,7 @@ function SubscribePageStep1() {
 
     const { addCookie, cookies, removeCookies } = useCookieManager()
 
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler } = useError({ namesIn: false, phoneNumberIn: false, cityIn: false, officeOfSpeedyIn: false }, "no", { phoneNumberForIn: false })
 
@@ -55,6 +56,9 @@ function SubscribePageStep1() {
 
     const getSubscriberData = (e) => {
 
+
+        setIsSubmit(true)
+
         e.preventDefault()
 
         const data = getFormData(e.target)
@@ -75,6 +79,8 @@ function SubscribePageStep1() {
         }
 
 
+
+        setIsSubmit(false)
 
 
     }
@@ -132,11 +138,17 @@ function SubscribePageStep1() {
 
                         </div>
 
+                        {!isSubmit ?
 
-                        <div>
-                            <input type="submit" value="Начин на плащене" />
-                            <i className="fa-solid fa-arrow-right-long"></i>
-                        </div>
+                            <div>
+                                <input type="submit" value="Начин на плащене" />
+                                <i className="fa-solid fa-arrow-right-long"></i>
+                            </div>
+
+                            : ""
+                        }
+
+
 
                     </form >
                 </section >

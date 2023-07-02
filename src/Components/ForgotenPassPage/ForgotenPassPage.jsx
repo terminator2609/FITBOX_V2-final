@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useAuthManager from "../../hooks/useAuthManager"
 import useError from "../../hooks/useError"
 import { forgotenPass } from "../../services/registration"
@@ -12,7 +12,9 @@ import PopUP from "../PopUp/PopUp"
 function ForgotenPassPage() {
 
     const { routerGuarding } = useAuthManager()
-    const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, isAuthSubmitStatus, isSubmitStatus} = useError({ emailIn: false }, "no", { emailForIn: false })
+    const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, isAuthSubmitStatus, isSubmitStatus } = useError({ emailIn: false }, "no", { emailForIn: false })
+
+    const [isSubmit, setSubmit] = useState(false)
 
     useEffect(() => {
 
@@ -24,6 +26,8 @@ function ForgotenPassPage() {
 
 
     const postRequestForForgotenPass = async (e) => {
+
+        setSubmit(true)
 
         e.preventDefault()
 
@@ -56,7 +60,7 @@ function ForgotenPassPage() {
 
                     e.target.reset()
                 } else {
-                    
+
                     errorManager("noExistUser")
                 }
 
@@ -72,6 +76,8 @@ function ForgotenPassPage() {
 
         }
 
+
+        setSubmit(false)
 
 
     }
@@ -100,15 +106,22 @@ function ForgotenPassPage() {
                         <input type="text" name="email" id="email" placeholder="ИМЕЙЛ" onBlur={formatErrorHandler} className={inputIn.emailIn || inputForIn.emailForIn || isAuthSubmitStatus[1].noExistUserIn ? "error" : ""} />
                     </div>
 
+                    {!isSubmit ?
 
-                    <div>
-                        <input type="submit" id="sendButton" value="Изпрати" />
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
+                        <div>
+                            <input type="submit" id="sendButton" value="Изпрати" />
+                            <i className="fa-solid fa-arrow-right-long"></i>
+                        </div>
+
+                        : ""
+
+                    }
+
+
                 </form>
             </main>
 
-            {isSubmitStatus[1].isSuccesfull ? <PopUP type="successfullRequestForChangePassword"/> : ""}
+            {isSubmitStatus[1].isSuccesfull ? <PopUP type="successfullRequestForChangePassword" /> : ""}
 
         </>
     )

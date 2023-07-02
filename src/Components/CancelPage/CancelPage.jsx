@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useAuthManager from "../../hooks/useAuthManager"
 import { getUserDataById } from "../../services/registration"
 import useCookieManager from "../../hooks/useCookieManager"
@@ -16,6 +16,7 @@ function CancelPage() {
     const { redirectToPage } = useClosePage()
     const { selectJustOne, isSelected } = useSelectCheckbox({ isProduct: false, isSupport: false, isDelivery: false, isBox: false, isPrice: false })
 
+    const [isSubmit, setIsSubmit] = useState(false)
 
     useEffect(() => {
 
@@ -51,6 +52,8 @@ function CancelPage() {
 
     const cancelSubscribe = async (e) => {
 
+        setIsSubmit(true)
+
         e.preventDefault()
 
         let data = {}
@@ -84,6 +87,8 @@ function CancelPage() {
 
             redirectToPage("/", "successfullCancel")
         }
+
+        setIsSubmit(false)
     }
 
     return (
@@ -177,13 +182,15 @@ function CancelPage() {
 
                     {isSelected.isProduct || isSelected.isSupport || isSelected.isDelivery || isSelected.isBox || isSelected.isPrice ?
 
-                        <div>
-                            <input type="submit" value="Канселирай" />
-                            <i className="fa-solid fa-arrow-right-long"></i>
-                        </div>
+                        !isSubmit ?
+                            <div>
+                                <input type="submit" value="Канселирай" />
+                                <i className="fa-solid fa-arrow-right-long"></i>
+                            </div>
+
+                            : ""
 
                         : ""
-
                     }
 
                 </form>

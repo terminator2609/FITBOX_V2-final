@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
 import Navigation from "../Navigation/Navigation"
 import useAuthManager from "../../hooks/useAuthManager"
@@ -16,7 +16,10 @@ function SubscribePageStep2() {
     const { selectJustOne, isSelected } = useSelectCheckbox({ isApplePay: false, isGooglePay: false, isCard: false })
     const { redirectToPage } = useClosePage()
 
-    const { cookies, removeCookies} = useCookieManager()
+    const { cookies, removeCookies } = useCookieManager()
+
+    const [isSubmit, setIsSubmit] = useState(false)
+
 
 
     useEffect(() => {
@@ -58,6 +61,8 @@ function SubscribePageStep2() {
 
 
     const postSubscribe = async (e) => {
+
+        setIsSubmit(true)
 
         e.preventDefault()
 
@@ -104,6 +109,9 @@ function SubscribePageStep2() {
         } else {
             redirectToPage("/", "unsuccessfullSubscribe")
         }
+
+
+        setIsSubmit(false)
     }
 
 
@@ -244,10 +252,14 @@ function SubscribePageStep2() {
                             {isSelected.isApplePay || isSelected.isGooglePay || isSelected.isCard ?
 
 
-                                <div className="button">
-                                    <input type="submit" value="Абонирай се" />
-                                    <i className="fa-solid fa-arrow-right-long"></i>
-                                </div>
+                                !isSubmit ?
+
+                                    <div className="button">
+                                        <input type="submit" value="Абонирай се" />
+                                        <i className="fa-solid fa-arrow-right-long"></i>
+                                    </div>
+
+                                    : ""
 
                                 : ""
                             }

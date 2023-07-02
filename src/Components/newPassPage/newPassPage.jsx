@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useAuthManager from "../../hooks/useAuthManager"
 import { useLocation } from "react-router-dom"
 import useClosePage from "../../hooks/useClosePage"
@@ -17,6 +17,7 @@ function NewPassPage() {
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, passwordContains, passwordChangeHandler } = useError({ passwordIn: false }, "no", { passwordForIn: false })
 
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const location = useLocation()
 
@@ -29,8 +30,8 @@ function NewPassPage() {
         if (!location.search.includes("email") || !location.hash.includes("id")) {
 
             redirectToPage("/forgotenPass")
-        } 
-        
+        }
+
         else {
 
             let userId = location.hash.split("=")
@@ -53,7 +54,7 @@ function NewPassPage() {
             }).catch(() => {
 
                 redirectToPage("/serverError")
-                
+
             })
 
         }
@@ -64,6 +65,8 @@ function NewPassPage() {
 
 
     const newPassHandler = async (e) => {
+
+        setIsSubmit(true)
 
         e.preventDefault()
 
@@ -110,6 +113,8 @@ function NewPassPage() {
 
         }
 
+        setIsSubmit(false)
+
     }
 
     return (
@@ -153,11 +158,17 @@ function NewPassPage() {
 
                     </div>
 
+                    {!isSubmit ?
 
-                    <div>
-                        <input type="submit" value="Запази" />
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
+                        <div>
+                            <input type="submit" value="Запази" />
+                            <i className="fa-solid fa-arrow-right-long"></i>
+                        </div>
+
+                        : ""
+                    }
+
+
                 </form>
             </main>
 

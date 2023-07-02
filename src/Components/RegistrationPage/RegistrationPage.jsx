@@ -5,7 +5,7 @@ import { postNewUserRequest, getUserDataByEmail } from "../../services/registrat
 import uniqid from "uniqid"
 import PopUP from "../PopUp/PopUp"
 import ScrollToTop from "../ScrollToTop/ScrollToTop"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useAuthManager from "../../hooks/useAuthManager"
 
 function RegistrationPage() {
@@ -22,10 +22,13 @@ function RegistrationPage() {
 
     const { inputIn, inputForIn, errorManager, typeError, statusText, submitStatusClasses, resetSubmitStatus, formatErrorHandler, passwordContains, passwordChangeHandler, isAuthSubmitStatus, isSubmitStatus } = useError({ namesIn: false, emailIn: false, passwordIn: false, phoneNumberIn: false }, "no", { emailForIn: false, passwordForIn: false, phoneNumberForIn: false })
 
+    const [isSubmit, setIsSubmit] = useState(false)
 
     const postNewUserHandler = async (e) => {
 
         e.preventDefault()
+
+        setIsSubmit(true)
 
         const data = getFormData(e.target)
 
@@ -89,6 +92,7 @@ function RegistrationPage() {
         }
 
 
+        setIsSubmit(false)
 
 
     }
@@ -117,8 +121,6 @@ function RegistrationPage() {
                         <input type="text" name="name" id="name" placeholder="ИМЕ" className={inputIn.namesIn ? "error" : ""} />
                         <input type="text" name="email" id="email" placeholder="ИМЕЙЛ" onBlur={formatErrorHandler} className={inputIn.emailIn || inputForIn.emailForIn || isAuthSubmitStatus[1].emailExistIn ? "error" : ""} />
                         <input type="password" name="password" id="password" placeholder="ПАРОЛА" onChange={passwordChangeHandler} onBlur={formatErrorHandler} className={inputIn.passwordIn || inputForIn.passwordForIn ? "error" : ""} />
-                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" onBlur={formatErrorHandler} className={inputIn.phoneNumberIn || inputForIn.phoneNumberForIn ? "error" : ""} />
-
 
                         {passwordContains[0].isPasswordInput ?
 
@@ -133,6 +135,8 @@ function RegistrationPage() {
                             : ""
                         }
 
+                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="ТЕЛЕФОН" onBlur={formatErrorHandler} className={inputIn.phoneNumberIn || inputForIn.phoneNumberForIn ? "error" : ""} />
+
 
                     </div>
 
@@ -146,11 +150,16 @@ function RegistrationPage() {
                             Общите условия</p>
                     </div>
 
+                    {!isSubmit ?
 
-                    <div>
-                        <input type="submit" value="Регистрация" />
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
+                        <div>
+                            <input type="submit" value="Регистрация" />
+                            <i className="fa-solid fa-arrow-right-long"></i>
+                        </div>
+
+                        : ""
+                    }
+
                 </form>
 
 
