@@ -26,10 +26,10 @@ function NewPassPage() {
         routerGuarding()
 
 
-        if (!location.search.includes("email") || !location.hash.includes("id")) {
+        // if (!location.search.includes("email") || !location.hash.includes("id")) {
 
-            redirectToPage("/forgotenPass")
-        } 
+        //     redirectToPage("/forgotenPass")
+        // } 
         
         // else {
 
