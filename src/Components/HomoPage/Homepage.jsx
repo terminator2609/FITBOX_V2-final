@@ -83,8 +83,9 @@ function HomePage() {
 
 
             }).catch(() => {
+
                 removeCookies("isLog")
-                redirectToPage("/serverError")
+                redirectToPage("/")
             })
         }
 
@@ -300,7 +301,11 @@ function HomePage() {
 
             {location.state === "successfullCancel" ? <PopUp type="successfullCancel" /> : ""}
 
+            {location.state === "successfullPassChange" ? <PopUp type="successfullPassChange" /> : ""}
 
+            {location.state === "noValidNewPassLink" ? <PopUp type="noValidNewPassLink" /> : ""}
+
+            {location.state === "profileNoExist" ? <PopUp type="profileNoExist" /> : ""}
         </>
     )
 }

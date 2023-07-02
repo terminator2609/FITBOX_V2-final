@@ -36,6 +36,18 @@ main.newPassPage form div:nth-of-type(1) {
     width: 100%;
 }
 
+main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+    font-size: 15px;
+    /* display: none; */
+    line-height: 1.2;
+    margin-bottom: 10%;
+}
+
+main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+    color: #ff3131;
+    display: block;
+}
+
 main.newPassPage form div:nth-of-type(1) input {
     background: none;
     border-top: none;
@@ -49,16 +61,34 @@ main.newPassPage form div:nth-of-type(1) input {
     font-family: Montserrat;
 }
 
+main.newPassPage form div:nth-of-type(1) input.error {
+    color: #ff3131;
+    border-bottom: 1px solid #ff3131;
+}
+
+main.newPassPage form div:nth-of-type(1) input.error::placeholder {
+    color: #ff3131;
+}
+
 main.newPassPage form div:nth-of-type(1) input::placeholder {
     color: #ffffff;
 }
 
-main.newPassPage form div:nth-of-type(1) input:nth-of-type(2) {
-    margin-top: 40px;
-}
 
 main.newPassPage form input:focus {
     outline: none !important;
+}
+
+main.newPassPage form div:nth-of-type(1) ul {
+    margin-top: 30px;
+    color: #ff3131;
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+main.newPassPage form div:nth-of-type(1) ul li.contains-char {
+    color: #d1ec3e;
 }
 
 main.newPassPage form div:nth-of-type(2) {
@@ -77,11 +107,13 @@ main.newPassPage form div:nth-of-type(2) input {
     margin-left: -3%;
     font-family: Montserrat;
     font-weight: 400;
+    cursor: pointer;
 }
 
 main.newPassPage form div:nth-of-type(2) i {
     color: #d1ec3e;
     font-size: 15px;
+    cursor: pointer;
 }
 
 
@@ -107,9 +139,18 @@ main.newPassPage form div:nth-of-type(2) i {
         margin-top: 25%;
     }
 
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 20px;
+    }
 
     main.newPassPage form div:nth-of-type(1) input {
         font-size: 20px;
+    }
+
+    main.newPassPage form div:nth-of-type(1) ul {
+        font-size: 20px;
+        margin-top: 35px;
+        margin-bottom: 35px;
     }
 
 
@@ -152,6 +193,10 @@ main.newPassPage form div:nth-of-type(2) i {
         margin-top: 40%;
     }
 
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 22px;
+    }
+    
 
     main.newPassPage form div:nth-of-type(1) input {
         font-size: 22px;
@@ -159,6 +204,12 @@ main.newPassPage form div:nth-of-type(2) i {
 
     main.newPassPage form div:nth-of-type(1) input:nth-of-type(n+2) {
         margin-top: 45px;
+    }
+
+    main.newPassPage form div:nth-of-type(1) ul {
+        font-size: 22px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
 
@@ -201,9 +252,26 @@ main.newPassPage form div:nth-of-type(2) i {
         margin-top: 18%;
     }
 
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 6%;
+    }
+
+
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 25px;
+    }
+
+
 
     main.newPassPage form div:nth-of-type(1) input {
         font-size: 25px;
+    }
+
+    main.newPassPage form div:nth-of-type(1) ul {
+        font-size: 25px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        line-height: 1.3;
     }
 
 
@@ -248,10 +316,27 @@ main.newPassPage form div:nth-of-type(2) i {
         margin-top: 14%;
     }
 
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 5%;
+        width: 50%;
+    }
+
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 28px;
+    }
+
     main.newPassPage form div:nth-of-type(1) input {
         font-size: 28px;
         width: 60%;
     }
+
+    main.newPassPage form div:nth-of-type(1) ul {
+        font-size: 28px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 55%;
+    }
+
 
     main.newPassPage form div:nth-of-type(2) {
         margin-top: 180px;
@@ -272,7 +357,7 @@ main.newPassPage form div:nth-of-type(2) i {
 
     header.newPassPage {
         margin-top: 110px;
-        
+
     }
 
     header.newPassPage h1 {
@@ -289,12 +374,26 @@ main.newPassPage form div:nth-of-type(2) i {
         margin-top: 8%;
     }
 
+    main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 4%;
+    }
+
+     main.newPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 32px;
+    }
+
     main.newPassPage form div:nth-of-type(1) input {
         font-size: 32px;
         width: 55%;
     }
 
-    
+    main.newPassPage form div:nth-of-type(1) ul {
+        font-size: 30px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        width: 50%;
+    }
+
     main.newPassPage form div:nth-of-type(2) input {
         font-size: 60px;
     }
@@ -306,12 +405,3 @@ main.newPassPage form div:nth-of-type(2) i {
 
 
 }
-
-
-
-
-
-
-
-
-

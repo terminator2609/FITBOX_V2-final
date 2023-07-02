@@ -10,7 +10,7 @@ const useError = (emptyInputs, isSelected, formatIn) => {
     const [inputForIn, setInputForIn] = useState(formatIn)
     const [statusText, setStatusText] = useState([])
     const [passwordContains, setPasswordContains] = useState([{ isPasswordInput: false }, { isStartUpperCase: false, isContainNumber: false, isContainUpperAndLowerCase: false, isContainSpecialChar: false, isMin8Char: false }])
-    const [isAuthSubmitStatus, setAuthSubmitStatus] = useState([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false}])
+    const [isAuthSubmitStatus, setAuthSubmitStatus] = useState([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
 
     const statusErrorTexts = {
         isEmptyText: "Непопълнени полета",
@@ -18,7 +18,8 @@ const useError = (emptyInputs, isSelected, formatIn) => {
         isBaseFormatText: "Това е грешен формат за",
         isAlreadyUserText: "Вече съществува потребител с този имейл",
         isNoConfirmUserText: "Този профил не е потвърден. За да получите достъп до вашия профил, трябва да потвърдите профила си от връзката във вашия имейл",
-        isFalseDataUserText: "Грешен имейл или парола"
+        isFalseDataUserText: "Грешен имейл или парола",
+        isNoExistUser: "Профил с този имейл не съществува"
     }
 
     const formatValidation = {
@@ -83,12 +84,12 @@ const useError = (emptyInputs, isSelected, formatIn) => {
             let statusTextArray = [...statusText]
 
             statusTextArray = statusTextArray.filter((a) => !a.includes(statusErrorTexts.isServerText))
-            
+
             statusTextArray.push(statusErrorTexts.isAlreadyUserText)
 
             setStatusText(statusTextArray)
 
-            
+
         }
 
 
@@ -97,12 +98,12 @@ const useError = (emptyInputs, isSelected, formatIn) => {
             let statusTextArray = [...statusText]
 
             statusTextArray = statusTextArray.filter((a) => !a.includes(statusErrorTexts.isServerText))
-            
+
             statusTextArray.push(statusErrorTexts.isNoConfirmUserText)
 
             setStatusText(statusTextArray)
 
-            
+
         }
 
 
@@ -111,12 +112,26 @@ const useError = (emptyInputs, isSelected, formatIn) => {
             let statusTextArray = [...statusText]
 
             statusTextArray = statusTextArray.filter((a) => !a.includes(statusErrorTexts.isServerText))
-            
+
             statusTextArray.push(statusErrorTexts.isFalseDataUserText)
 
             setStatusText(statusTextArray)
 
-            
+
+        }
+
+
+        if (isAuthSubmitStatus[0].noExistUser && !statusText.includes(statusErrorTexts.isNoExistUser)) {
+
+            let statusTextArray = [...statusText]
+
+            statusTextArray = statusTextArray.filter((a) => !a.includes(statusErrorTexts.isServerText))
+
+            statusTextArray.push(statusErrorTexts.isNoExistUser)
+
+            setStatusText(statusTextArray)
+
+
         }
 
 
@@ -128,7 +143,7 @@ const useError = (emptyInputs, isSelected, formatIn) => {
 
     const submitStatusClasses = () => {
 
-        if (isSubmitStatus[0].isEmptyError || isSubmitStatus[0].isFormatError || isSubmitStatus[0].isServerError || isAuthSubmitStatus[0].alreadyExistUser || isAuthSubmitStatus[0].noConfirmUser || isAuthSubmitStatus[0].falseDataUser) {
+        if (isSubmitStatus[0].isEmptyError || isSubmitStatus[0].isFormatError || isSubmitStatus[0].isServerError || isAuthSubmitStatus[0].alreadyExistUser || isAuthSubmitStatus[0].noConfirmUser || isAuthSubmitStatus[0].falseDataUser || isAuthSubmitStatus[0].noExistUser) {
 
             return "error-successfull-handler error-handler-active"
 
@@ -195,7 +210,7 @@ const useError = (emptyInputs, isSelected, formatIn) => {
         array[1].isSuccesfull = value
 
         setIsSubmitStatus(array)
-        setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false}])
+        setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false }])
     }
 
     const emptyFieldManager = (event) => {
@@ -236,29 +251,37 @@ const useError = (emptyInputs, isSelected, formatIn) => {
 
             setIsSubmitStatus([{ isEmptyError: false, isFormatError: false, isServerError: false }, { isSuccesfull: false }])
 
-        } else if(e.target.id === "email" && isAuthSubmitStatus[0].alreadyExistUser) {
+        } else if (e.target.id === "email" && isAuthSubmitStatus[0].alreadyExistUser) {
 
-            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false}])
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
 
             const statusTextErrorDefAlreadyExistUser = statusText.filter((a) => !a.includes(statusErrorTexts.isAlreadyUserText))
 
             setStatusText(statusTextErrorDefAlreadyExistUser)
 
 
-        } else if(isAuthSubmitStatus[0].noConfirmUser) {
+        } else if (isAuthSubmitStatus[0].noConfirmUser) {
 
-            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false}])
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
 
             const statusTextErrorDefAlreadyExistUser = statusText.filter((a) => !a.includes(statusErrorTexts.isNoConfirmUserText))
 
             setStatusText(statusTextErrorDefAlreadyExistUser)
 
 
-        } else if(isAuthSubmitStatus[0].falseDataUser) {
+        } else if (isAuthSubmitStatus[0].falseDataUser) {
 
-            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false}])
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
 
             const statusTextErrorDefAlreadyExistUser = statusText.filter((a) => !a.includes(statusErrorTexts.isFalseDataUserText))
+
+            setStatusText(statusTextErrorDefAlreadyExistUser)
+
+        } else if (isAuthSubmitStatus[0].noExistUser) {
+
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
+
+            const statusTextErrorDefAlreadyExistUser = statusText.filter((a) => !a.includes(statusErrorTexts.isNoExistUser))
 
             setStatusText(statusTextErrorDefAlreadyExistUser)
         }
@@ -320,20 +343,25 @@ const useError = (emptyInputs, isSelected, formatIn) => {
 
         if (typeError.alreadyExistUser) {
 
-            setAuthSubmitStatus([{ alreadyExistUser: true, noConfirmUser: false, falseDataUser: false }, {emailExistIn: true, noConfirmUserIn: false, falseDataUserIn: false}])
+            setAuthSubmitStatus([{ alreadyExistUser: true, noConfirmUser: false, falseDataUser: false, noExistUser: false }, { emailExistIn: true, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: false }])
 
         }
 
 
-        if(typeError.noConfirmProfil) {
-            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: true, falseDataUser: false }, {emailExistIn: false, noConfirmUserIn: true, falseDataUserIn: false}])
+        if (typeError.noConfirmProfil) {
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: true, falseDataUser: false, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: true, falseDataUserIn: false, noExistUserIn: false }])
         }
 
 
-        if(typeError.falseDataUser) {
-            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: true }, {emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: true}])
+        if (typeError.falseDataUser) {
+
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: true, noExistUser: false }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: true, noExistUserIn: false }])
         }
 
+
+        if(typeError.noExistUser) {
+            setAuthSubmitStatus([{ alreadyExistUser: false, noConfirmUser: false, falseDataUser: false, noExistUser: true }, { emailExistIn: false, noConfirmUserIn: false, falseDataUserIn: false, noExistUserIn: true }])
+        }
 
 
 

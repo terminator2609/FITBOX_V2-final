@@ -35,6 +35,18 @@ main.forgotenPassPage form div:nth-of-type(1) {
     width: 100%;
 }
 
+main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+    font-size: 15px;
+    /* display: none; */
+    line-height: 1.2;
+    margin-bottom: 10%;
+}
+
+main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+    color: #ff3131;
+    display: block;
+}
+
 main.forgotenPassPage form div:nth-of-type(1) input {
     background: none;
     border-top: none;
@@ -48,12 +60,17 @@ main.forgotenPassPage form div:nth-of-type(1) input {
     font-family: Montserrat;
 }
 
-main.forgotenPassPage form div:nth-of-type(1) input::placeholder {
-    color: #ffffff;
+main.forgotenPassPage form div:nth-of-type(1) input.error {
+    color: #ff3131;
+    border-bottom: 1px solid #ff3131;
 }
 
-main.forgotenPassPage form div:nth-of-type(1) input:nth-of-type(2) {
-    margin-top: 40px;
+main.forgotenPassPage form div:nth-of-type(1) input.error::placeholder {
+    color: #ff3131;
+}
+
+main.forgotenPassPage form div:nth-of-type(1) input::placeholder {
+    color: #ffffff;
 }
 
 main.forgotenPassPage form input:focus {
@@ -107,6 +124,10 @@ main.forgotenPassPage form div:nth-of-type(2) i {
         margin-top: 25%;
     }
 
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 20px;
+    }
+    
 
     main.forgotenPassPage form div:nth-of-type(1) input {
         font-size: 20px;
@@ -151,6 +172,12 @@ main.forgotenPassPage form div:nth-of-type(2) i {
     main.forgotenPassPage {
         margin-top: 40%;
     }
+
+
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 22px;
+    }
+    
 
 
     main.forgotenPassPage form div:nth-of-type(1) input {
@@ -201,6 +228,17 @@ main.forgotenPassPage form div:nth-of-type(2) i {
         margin-top: 18%;
     }
 
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 6%;
+    }
+
+
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 25px;
+    }
+
+
+
 
     main.forgotenPassPage form div:nth-of-type(1) input {
         font-size: 25px;
@@ -248,6 +286,15 @@ main.forgotenPassPage form div:nth-of-type(2) i {
         margin-top: 14%;
     }
 
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 5%;
+        width: 50%;
+    }
+
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 28px;
+    }
+
     main.forgotenPassPage form div:nth-of-type(1) input {
         font-size: 28px;
         width: 60%;
@@ -289,6 +336,14 @@ main.forgotenPassPage form div:nth-of-type(2) i {
         margin-top: 8%;
     }
 
+    main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        margin-bottom: 4%;
+    }
+
+     main.forgotenPassPage form div:nth-of-type(1) span.error-successfull-handler {
+        font-size: 32px;
+    }
+
     main.forgotenPassPage form div:nth-of-type(1) input {
         font-size: 32px;
         width: 55%;
@@ -297,10 +352,12 @@ main.forgotenPassPage form div:nth-of-type(2) i {
     
     main.forgotenPassPage form div:nth-of-type(2) input {
         font-size: 60px;
+        cursor: pointer;
     }
 
     main.forgotenPassPage form div:nth-of-type(2) i {
         font-size: 40px;
+        cursor: pointer;
     }
 
 

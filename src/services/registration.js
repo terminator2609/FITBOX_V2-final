@@ -19,7 +19,7 @@ function postNewUserRequest(data) {
 
 function postConfirmationRegistration(data) {
 
-    return fetch(`${baseUrl}/registration/confirmed/${data._id}`,  {
+    return fetch(`${baseUrl}/registration/confirmed/${data._id}`, {
 
         method: "POST",
         headers: {
@@ -36,13 +36,38 @@ function getUserDataByEmail(email) {
     console.log(email)
 
     return fetch(`${baseUrl}/registration/${email}`)
-    .then((res) => res.json())
+        .then((res) => res.json())
 }
 
 function getUserDataById(id) {
 
     return fetch(`${baseUrl}/registration/confirmation/${id}`)
-    .then((res) => res.json())
+        .then((res) => res.json())
 }
 
-export { postNewUserRequest, postConfirmationRegistration, getUserDataById, getUserDataByEmail }
+
+function forgotenPass(data) {
+    return fetch(`${baseUrl}/registration/forgotenPass`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify(data)
+    }).then((res) => res.json())
+}
+
+
+function newPass(data) {
+
+    return fetch(`${baseUrl}/registration/newPass`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify(data)
+    }).then((res) => res.json())
+}
+
+export { postNewUserRequest, postConfirmationRegistration, getUserDataById, getUserDataByEmail, forgotenPass, newPass }
